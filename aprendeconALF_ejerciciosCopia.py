@@ -416,18 +416,19 @@
 
 
 
-
-
+# region bucles
 #bucles
 #Ejercicio 1
 #Escribir un programa que pida al usuario una palabra y 
 #la muestre por pantalla 10 veces.
 
-
-
-
-
-
+def palabra_bucle():
+    contador = 0
+    palabra = str(input('dame una palabra, que te la repito: '))
+    while contador <= 10:
+        print(palabra)
+        contador += 1
+palabra_bucle()
 
 
 #Ejercicio 2
