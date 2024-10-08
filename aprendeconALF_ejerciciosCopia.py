@@ -319,6 +319,7 @@
 
 
 
+
 #Ejercicio 6
 #Los alumnos de un curso se han dividido en dos grupos A y B 
 # de acuerdo al sexo y el nombre. El grupo A esta formado por 

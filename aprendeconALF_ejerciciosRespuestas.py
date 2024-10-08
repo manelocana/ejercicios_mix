@@ -184,6 +184,7 @@ print("Balance tras el tercer año:" + str(round(balance3, 2)))
 
 
 
+
 # ------------------------------------------------------------------------------
 #region cadenas
 #cadenas
