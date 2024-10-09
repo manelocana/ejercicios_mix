@@ -177,8 +177,12 @@ print("Balance tras el tercer año:" + str(round(balance3, 2)))
 # por no ser fresca y el coste final total.
 
 
-
-
+precio = 3.49
+descuento = 60
+barras = int(input('cuantas barras de ayer se vendieron? '))
+precio_barra = precio * descuento / 100
+print(f'el precio de la barra normal es de: {precio}€,') 
+print(f'con un descuento del 60%, el total es: {precio_barra * barras}€')
 
 
 
