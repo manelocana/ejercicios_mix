@@ -5,9 +5,9 @@
 
 
 
-#region datossimples
-#Ejercicio 1
-#Escribir un programa que muestre por pantalla la cadena ¡Hola Mundo!.
+# region datossimples
+# Ejercicio 1
+# Escribir un programa que muestre por pantalla la cadena ¡Hola Mundo!.
 
 '''
 def imprimir():
@@ -17,9 +17,9 @@ imprimir()
 
 
 
-#Ejercicio 2
-#Escribir un programa que almacene la cadena ¡Hola Mundo! en una variable 
-#y luego muestre por pantalla el contenido de la variable.
+# Ejercicio 2
+# Escribir un programa que almacene la cadena ¡Hola Mundo! en una variable 
+# y luego muestre por pantalla el contenido de la variable.
 
 '''
 def variable():
@@ -30,10 +30,10 @@ variable()
 
 
 
-#Ejercicio 3
-#Escribir un programa que pregunte el nombre del usuario en la consola 
-#y después de que el usuario lo introduzca muestre por pantalla 
-#la cadena ¡Hola <nombre>!, donde <nombre> es el nombre que el usuario haya introducido.
+# Ejercicio 3
+# Escribir un programa que pregunte el nombre del usuario en la consola 
+# y después de que el usuario lo introduzca muestre por pantalla 
+# la cadena ¡Hola <nombre>!, donde <nombre> es el nombre que el usuario haya introducido.
 
 '''
 def nombre():
@@ -44,8 +44,8 @@ nombre()
 
 
 
-#Ejercicio 4
-#Escribir un programa que muestre por pantalla el resultado de la siguiente operación aritmética XX.
+# Ejercicio 4
+# Escribir un programa que muestre por pantalla el resultado de la siguiente operación aritmética XX.
 
 
 '''
@@ -53,9 +53,9 @@ nombre()
 
 
 
-#Ejercicio 5
-#Escribir un programa que pregunte al usuario por el número de horas trabajadas y el coste por hora. 
-#Después debe mostrar por pantalla la paga que le corresponde.
+# Ejercicio 5
+# Escribir un programa que pregunte al usuario por el número de horas trabajadas y el coste por hora. 
+# Después debe mostrar por pantalla la paga que le corresponde.
 
 '''
 def numerohoras():
@@ -68,10 +68,10 @@ numerohoras()
 
 
 
-#Ejercicio 6
-#Escribir un programa que lea un entero positivo, "nombre entier"
-#, introducido por el usuario y después muestre en pantalla la suma de todos los enteros 
-#desde 1 hasta "n". 
+# Ejercicio 6
+# Escribir un programa que lea un entero positivo, "nombre entier"
+# , introducido por el usuario y después muestre en pantalla la suma de todos los enteros 
+# desde 1 hasta "n". 
 
 '''
 numero_entero = int(input('dame un numero entero: '))
@@ -81,11 +81,11 @@ print('la suma de los numero desde 1 hasta ' + str(numero_entero) + ' es ' + str
 
 
 
-#Ejercicio 7
-#Escribir un programa que pida al usuario su peso (kg) y estatura (m), 
-#calcule el índice de masa corporal y lo almacene en una variable,
-#y muestre por pantalla la frase: "tu indice de masa corporal es "imc", 
-#donde "imc" es el índice de masa corporal, calculado redondeado con dos decimales.
+# Ejercicio 7
+# Escribir un programa que pida al usuario su peso (kg) y estatura (m), 
+# calcule el índice de masa corporal y lo almacene en una variable,
+# y muestre por pantalla la frase: "tu indice de masa corporal es "imc", 
+# donde "imc" es el índice de masa corporal, calculado redondeado con dos decimales.
 
 '''
 peso = float(input('cual es tu peso: '))
@@ -96,11 +96,11 @@ print(f'tu indice de masa corporal es {imc}')
 
 
 
-#Ejercicio 8
-#Escribir un programa que pida al usuario dos números enteros 
-#y muestre por pantalla la <n> entre <m> da un cociente <c> 
-#y un resto <r> donde <n> y <m> son los números introducidos por el usuario, 
-#y <c> y <r> son el cociente y el resto de la división entera respectivamente.
+# Ejercicio 8
+# Escribir un programa que pida al usuario dos números enteros 
+# y muestre por pantalla la <n> entre <m> da un cociente <c> 
+# y un resto <r> donde <n> y <m> son los números introducidos por el usuario, 
+# y <c> y <r> son el cociente y el resto de la división entera respectivamente.
 
 '''
 n = int(input('dame un numero entero: '))
@@ -112,9 +112,9 @@ print(f'{n} entre {m}, da un cociente de {c} y un resto de {r}')
 
 
 
-#Ejercicio 9
-#Escribir un programa que pregunte al usuario una cantidad a invertir, 
-#el interés anual y el número de años, y muestre por pantalla el capital obtenido en la inversión.
+# Ejercicio 9
+# Escribir un programa que pregunte al usuario una cantidad a invertir, 
+# el interés anual y el número de años, y muestre por pantalla el capital obtenido en la inversión.
 
 '''
 cantidad_invertir = float(input('cantidad a invertir: '))
@@ -126,8 +126,8 @@ print("Capital final: " + str(round(cantidad_invertir * (interes_anual / 100 + 1
 
 
 
-#Ejercicio 10
-#Una juguetería tiene mucho éxito en dos de sus productos: 
+# Ejercicio 10
+# Una juguetería tiene mucho éxito en dos de sus productos: 
 # payasos y muñecas. Suele hacer venta por correo y 
 # la empresa de logística les cobra por peso de cada paquete 
 # así que deben calcular el peso de los payasos y muñecas que saldrán 
@@ -146,8 +146,8 @@ print(f'En el último pedido, se vendieron {payasos_vendidos} payasos y {muñeca
 
 
 
-#Ejercicio 11
-#Imagina que acabas de abrir una nueva cuenta de ahorros 
+# Ejercicio 11
+# Imagina que acabas de abrir una nueva cuenta de ahorros 
 # que te ofrece el 4% de interés al año. Estos ahorros debido a intereses, 
 # que no se cobran hasta finales de año, 
 # se te añaden al balance final de tu cuenta de ahorros. 
@@ -188,8 +188,8 @@ print(f'con un descuento del 60%, el total es: {precio_barra * barras}€')
 
 
 # ------------------------------------------------------------------------------
-#region cadenas
-#cadenas
+# region cadenas
+# cadenas
 # Ejercicio 1
 # Escribir un programa que pregunte el nombre del usuario en la consola 
 # y un número entero e imprima por pantalla en líneas distintas 
@@ -203,8 +203,8 @@ print((nombre + '\n') * num)
 
 
 
-#Ejercicio 2
-#Escribir un programa que pregunte el nombre completo 
+# Ejercicio 2
+# Escribir un programa que pregunte el nombre completo 
 # del usuario en la consola y después muestre por pantalla 
 # el nombre completo del usuario tres veces, una con todas 
 # las letras minúsculas, otra con todas las letras mayúsculas 
@@ -221,8 +221,8 @@ print(nombre.capitalize())
 
 
 
-#Ejercicio 3
-#Escribir un programa que pregunte el nombre del usuario en la consola y 
+# Ejercicio 3
+# Escribir un programa que pregunte el nombre del usuario en la consola y 
 # después de que el usuario lo introduzca, muestre por pantalla <NOMBRE> 
 # tiene <n> letras, donde <NOMBRE> es el nombre de usuario en mayúsculas y 
 # <n> es el número de letras que tienen el nombre.
@@ -237,39 +237,36 @@ nombre()
 
 
 
-#Ejercicio 4
-#Los teléfonos de una empresa tienen el siguiente formato 
+# Ejercicio 4
+# Los teléfonos de una empresa tienen el siguiente formato 
 # prefijo-número-extension donde el prefijo es el código del país +34, 
 # y la extensión tiene dos dígitos (por ejemplo +34-913724710-56). 
 # Escribir un programa que pregunte por un número de teléfono con este 
 # formato y muestre por pantalla el número de teléfono sin el prefijo y 
 # la extensión.
 
-
+'''
 numero_telefono = input('dame un numero de telefono completo, prefijo-numero-extension: ')
 print('el numero de telf es', numero_telefono[4:-3])
+'''
 
 
 
-
-
-
-#Ejercicio 5
-#Escribir un programa que pida al usuario que introduzca una frase en 
+# Ejercicio 5
+# Escribir un programa que pida al usuario que introduzca una frase en 
 # la consola y muestre por pantalla la frase invertida.
 
 '''
 def frase_invertida():
-    frase = str(input('dime una frase: '))[::-1]
-    print(frase)
+    frase = str(input('dime una frase: '))
+    print(frase[::-1])
 frase_invertida()
 '''
 
 
 
-
-#Ejercicio 6
-#Escribir un programa que pida al usuario que introduzca una frase 
+# Ejercicio 6
+# Escribir un programa que pida al usuario que introduzca una frase 
 # en la consola y una vocal, y después muestre por pantalla la misma 
 # frase pero con la vocal introducida en mayúscula.
 
@@ -283,73 +280,90 @@ frase_vocal()
 
 
 
-
-#Ejercicio 7
-#Escribir un programa que pregunte el correo electrónico del usuario 
+# Ejercicio 7
+# Escribir un programa que pregunte el correo electrónico del usuario 
 # en la consola y muestre por pantalla otro correo electrónico con el 
 # mismo nombre (la parte delante de la arroba @) pero con dominio ceu.es.    
 
+'''
+correo = input('dame un correo electronico: ')
+print(correo[:correo.find('@')] + '@ceu.es')
+'''
 
 
 
-
-
-
-
-#Ejercicio 8
-#Escribir un programa que pregunte por consola el precio 
+# Ejercicio 8
+# Escribir un programa que pregunte por consola el precio 
 # de un producto en euros con dos decimales y muestre por pantalla 
 # el número de euros y el número de céntimos del precio introducido.
 
+'''
+precio = input("Introduce el precio del producto con dos decimales (separado por punto . ):  ")
+print(precio[:precio.find('.')], 'euros y', precio[precio.find('.')+1:], 'céntimos.')
+'''
 
 
 
-
-
-
-
-#Ejercicio 9
-#Escribir un programa que pregunte al usuario la fecha de su nacimiento 
+# Ejercicio 9
+# Escribir un programa que pregunte al usuario la fecha de su nacimiento 
 # en formato dd/mm/aaaa y muestra por pantalla, el día, el mes y el año. 
 # Adaptar el programa anterior para que también funcione cuando el día 
 # o el mes se introduzcan con un solo carácter.
 
+'''
+fecha = input('dame tu fecha de naciemiento en formato dd/mm/aaaa : ')
+print('dia', fecha[:2])
+print('mes', fecha[3:5])
+print('año', fecha[6:])
+'''
+
+'''
+fecha = input("Introduce la fecha de tu nacimiento en formato día/mes/año: ")
+dia = fecha[:fecha.find('/')]
+mesaño = fecha[fecha.find('/')+1:]
+mes = mesaño[:mesaño.find('/')]
+año = mesaño[mesaño.find('/')+1:]
+print('Día', dia)
+print('Mes', mes)
+print('Año', año)
+'''
 
 
 
-
-
-
-
-#Ejercicio 10
-#Escribir un programa que pregunte por consola por los productos 
+# Ejercicio 10
+# Escribir un programa que pregunte por consola por los productos 
 # de una cesta de la compra, separados por comas, y muestre por 
 # pantalla cada uno de los productos en una línea distinta.
 
+'''
+lista = input('dame una lista de la compra, separando cada elemento con , :')
+print(lista.replace(',', '\n'))
+'''
 
 
 
-
-
-
-
-#Ejercicio 11
-#Escribir un programa que pregunte el nombre el un producto, 
+# Ejercicio 11
+# Escribir un programa que pregunte el nombre el un producto, 
 # su precio y un número de unidades y muestre por pantalla una cadena 
 # con el nombre del producto seguido de su precio unitario con 6 dígitos 
 # enteros y 2 decimales, el número de unidades con tres dígitos 
 # y el coste total con 8 dígitos enteros y 2 decimales.
 
-
+'''
+producto = input('dime un producto: ')
+precio = float(input('dime su precio: '))
+unidades = int(input('unidades de ese producto: '))
+print('{producto}: {unidades:3d} unidades x {precio:9.2f}€ = {total:11.2f}€'.format(producto = producto, unidades = unidades, precio = precio, total = unidades * precio))
+'''
 
 
 
 # --------------------------------------------------------------------------------------------
-#region condicionales
-#condicionales
-#Ejercicio 1
-#Escribir un programa que pregunte al usuario su edad y 
-#muestre por pantalla si es mayor de edad o no.
+# region condicionales
+# condicionales
+# Ejercicio 1
+# Escribir un programa que pregunte al usuario su edad y 
+# muestre por pantalla si es mayor de edad o no.
 
 '''
 def mayor_de_edad():
@@ -363,11 +377,8 @@ mayor_de_edad()
 
 
 
-
-
-
-#Ejercicio 2
-#Escribir un programa que almacene la cadena de caracteres contraseña 
+# Ejercicio 2
+# Escribir un programa que almacene la cadena de caracteres contraseña 
 # en una variable, pregunte al usuario por la contraseña e imprima por 
 # pantalla si la contraseña introducida por el usuario coincide con la 
 # guardada en la variable sin tener en cuenta mayúsculas y minúsculas.
@@ -385,9 +396,8 @@ contraseña()
 
 
 
-
-#Ejercicio 3
-#Escribir un programa que pida al usuario dos números y 
+# Ejercicio 3
+# Escribir un programa que pida al usuario dos números y 
 # muestre por pantalla su división. Si el divisor es cero el 
 # programa debe mostrar un error.
 
@@ -403,12 +413,9 @@ numeros()
 '''
 
 
-    
 
-
-
-#Ejercicio 4
-#Escribir un programa que pida al usuario un número entero y 
+# Ejercicio 4
+# Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla si es par o impar.
 
 '''
@@ -423,29 +430,21 @@ paroimpar()
 
 
 
-
-
-
-#Ejercicio 5
-#Para tributar un determinado impuesto se debe ser mayor de 16 años y 
+# Ejercicio 5
+# Para tributar un determinado impuesto se debe ser mayor de 16 años y 
 # tener unos ingresos iguales o superiores a 1000 € mensuales. 
 # Escribir un programa que pregunte al usuario su edad y 
 # sus ingresos mensuales y muestre por pantalla si el usuario 
 # tiene que tributar o no.
 
 '''
-def tributar():
-    edad = int(input('que edad tienes? '))
-    salario = int(input('que salario? '))
-    if edad < 16 or salario < 1000:
-        print('no tienes derecho')
-    else:
-        print('tienes que tributar')
-tributar()
+edad = int(input('dime tu edad: '))
+ingresos = int(input('que ingresos mensuales tienes: '))
+if edad < 16 or ingresos < 1000:
+    print('no tienes que tributar')
+else:
+    print('pagas impuestos')
 '''
-
-
-
 
 
 
@@ -458,7 +457,9 @@ tributar()
 # y muestre por pantalla el grupo que le corresponde.
 
 
-
+nombre = input('dime tu nombre: ')
+genero = input('dime tu genero (H o M): ')
+if nombre < 'm' or genero ==
 
 
 
