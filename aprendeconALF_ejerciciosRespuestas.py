@@ -176,16 +176,14 @@ print("Balance tras el tercer año:" + str(round(balance3, 2)))
 # Después el programa debe mostrar el precio habitual de una barra de pan, el descuento que se le hace 
 # por no ser fresca y el coste final total.
 
-
+'''
 precio = 3.49
 descuento = 60
 barras = int(input('cuantas barras de ayer se vendieron? '))
 precio_barra = precio * descuento / 100
 print(f'el precio de la barra normal es de: {precio}€,') 
 print(f'con un descuento del 60%, el total es: {precio_barra * barras}€')
-
-
-
+'''
 
 
 
@@ -197,9 +195,11 @@ print(f'con un descuento del 60%, el total es: {precio_barra * barras}€')
 # y un número entero e imprima por pantalla en líneas distintas 
 # el nombre del usuario tantas veces como el número introducido.
 
-
-
-
+'''
+nombre = str(input('dame un nombre: '))
+num = int(input('dame un num: '))
+print((nombre + '\n') * num)
+'''
 
 
 
@@ -212,9 +212,12 @@ print(f'con un descuento del 60%, el total es: {precio_barra * barras}€')
 # El usuario puede introducir su nombre combinando mayúsculas y 
 # minúsculas como quiera.
 
-
-
-
+'''
+nombre = input('dame tu nombre completo: ')
+print(nombre.lower())
+print(nombre.upper())
+print(nombre.capitalize())
+'''
 
 
 
@@ -243,7 +246,8 @@ nombre()
 # la extensión.
 
 
-
+numero_telefono = input('dame un numero de telefono completo, prefijo-numero-extension: ')
+print('el numero de telf es', numero_telefono[4:-3])
 
 
 
