@@ -448,45 +448,58 @@ else:
 
 
 
-#Ejercicio 6
-#Los alumnos de un curso se han dividido en dos grupos A y B 
+# Ejercicio 6
+# Los alumnos de un curso se han dividido en dos grupos A y B 
 # de acuerdo al sexo y el nombre. El grupo A esta formado por 
 # las mujeres con un nombre anterior a la M y los hombres con 
 # un nombre posterior a la N y el grupo B por el resto. 
 # Escribir un programa que pregunte al usuario su nombre y sexo, 
 # y muestre por pantalla el grupo que le corresponde.
 
-
+'''
 nombre = input('dime tu nombre: ')
 genero = input('dime tu genero (H o M): ')
-if nombre < 'm' or genero ==
+if (genero == 'M' and nombre.lower() < 'm') or (genero == 'H' and nombre.lower() > 'n'):
+    grupo = 'A'
+else:
+    grupo = 'B'
+print('tu grupo es', grupo)
+'''
 
 
 
-
-
-#Ejercicio 7
-#Los tramos impositivos para la declaración de la renta en un 
+# Ejercicio 7
+# Los tramos impositivos para la declaración de la renta en un 
 # determinado país son los siguientes:
-#Renta 	Tipo impositivo
-#Menos de 10000€ 	5%
-#Entre 10000€ y 20000€ 	15%
-#Entre 20000€ y 35000€ 	20%
-#Entre 35000€ y 60000€ 	30%
-#Más de 60000€ 	45%
-#Escribir un programa que pregunte al usuario su renta anual y 
+# Renta 	                Tipo impositivo
+# Menos de 10000€ 	            5%
+# Entre 10000€ y 20000€ 	    15%
+# Entre 20000€ y 35000€ 	    20%
+# Entre 35000€ y 60000€ 	    30%
+# Más de 60000€ 	            45%
+# Escribir un programa que pregunte al usuario su renta anual y 
 # muestre por pantalla el tipo impositivo que le corresponde.
 
+'''
+renta = int(input('dime tu renta anual: '))
+if renta < 10000:
+    impuestos = 5
+elif renta > 10000 and renta < 20000:
+    impuestos = 15
+elif renta > 20000 and renta < 35000:
+    impuestos = 20
+elif renta > 35000 and renta < 60000:
+    impuestos = 30
+else:
+    renta > 60000
+    impuestos = 45
+print(f'con una renta de {renta} tienes que pagar el {impuestos} de impuestos')
+'''
 
 
 
-
-
-
-
-
-#Ejercicio 8
-#En una determinada empresa, sus empleados son evaluados al final 
+# Ejercicio 8
+# En una determinada empresa, sus empleados son evaluados al final 
 # de cada año. Los puntos que pueden obtener en la evaluación 
 # comienzan en 0.0 y pueden ir aumentando, traduciéndose en mejores 
 # beneficios. Los puntos que pueden conseguir los empleados 
@@ -495,21 +508,40 @@ if nombre < 'm' or genero ==
 # niveles correspondientes a cada puntuación. La cantidad de dinero 
 # conseguida en cada nivel es de 2.400€ multiplicada por la puntuación 
 # del nivel.
-#Nivel 	Puntuación
-#Inaceptable 	0.0
-#Aceptable 	0.4
-#Meritorio 	0.6 o más
-#Escribir un programa que lea la puntuación del usuario e indique su nivel 
+# Nivel 	Puntuación
+# Inaceptable 	0.0
+# Aceptable 	0.4
+# Meritorio 	0.6 o más
+# Escribir un programa que lea la puntuación del usuario e indique su nivel 
 # de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 
+'''
+bonificacion = 2400
+inaceptable = 0
+aceptable = 0.4
+meritorio = 0.6
+puntuacion = float(input('que puntuacion tienes? '))
+
+if puntuacion == inaceptable:
+    nivel = 'inaceptable'
+elif puntuacion == aceptable:
+    nivel = 'aceptable'
+elif puntuacion == meritorio:
+    nivel = 'meritorio'
+else:
+    nivel = ''
+
+if nivel == '':
+    print('la puntuacion no es valida')
+else:
+    print('tu nivel de rendimiento es %s' % nivel)
+    print('te corresponde cobrar %.2f€' % (puntuacion * bonificacion))
+'''
 
 
 
-
-
-
-#Ejercicio 9
-#Escribir un programa para una empresa que tiene salas de juegos 
+# Ejercicio 9
+# Escribir un programa para una empresa que tiene salas de juegos 
 # para todas las edades y quiere calcular de forma automática el 
 # precio que debe cobrar a sus clientes por entrar. 
 # El programa debe preguntar al usuario la edad del cliente y 
@@ -517,12 +549,17 @@ if nombre < 'm' or genero ==
 # puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ 
 # y si es mayor de 18 años, 10€.
 
-
-
- 
-
-
-
+'''
+edad = int(input('que edad tienes: '))
+if edad < 4:
+    precio = 0
+elif edad > 4 and edad < 18:
+    precio = 5
+else:
+    edad > 18
+    precio = 10
+print('el precio de la entrada es', precio, '€')
+'''
 
 
 
@@ -544,6 +581,28 @@ if nombre < 'm' or genero ==
 
 
 
+# Presentación del menú con los tipos de pizza
+print("Bienvenido a la pizzeria Bella Napoli.\nTipos de pizza\n\t1- Vegetariana\n\t2- No vegetariana\n")
+tipo = input("Introduce el número correspondiente al tipo de pizza que quieres:")
+# Decisión sobre el tipo de pizza
+if tipo == "1":
+    print("Ingredientes de pizzas vegetarianas\n\t 1- Pimiento\n\t2- Tofu\n")
+    ingrediente = input("Introduce el ingrediente que deseas: ")
+    print("Pizza vegetariana con mozzarella, tomate y ", end="")
+    if ingrediente == "1":
+        print("pimiento")
+    else: 
+        print("tofu")
+else:
+    print("Ingredientes de pizzas no vegetarianas\n\t1- Peperoni\n\t2- Jamón\n\t3- Salmón\n")
+    ingrediente = input("Introduce el ingrediente que deseas: ")
+    print("Pizza no vegetarina con mozarrella, tomate y ", end="")
+    if ingrediente == "1":
+        print("peperoni")
+    elif ingrediente == "2":
+        print("jamón")
+    else:
+        print("salmón")
 
 
 
@@ -1476,7 +1535,7 @@ print(statistics([2.3, 5.7, 6.8, 9.7, 12.1, 15.6]))
 # Ejercicio 9
 # Escribir una función que calcule el máximo común divisor de dos números y otra que calcule el mínimo común múltiplo.
 
-
+'''
 def maximo_comun_divisor(num1, num2):
     rest = 0
     while (num1 > 0):
@@ -1495,7 +1554,7 @@ def minimo_comun_multiplo(num1, num2):
         combi += 1
     return combi
 print(minimo_comun_multiplo(24,36))
-
+'''
         
     
 
