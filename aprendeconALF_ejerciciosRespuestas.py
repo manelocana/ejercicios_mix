@@ -563,15 +563,13 @@ print('el precio de la entrada es', precio, '€')
 
 
 
-#Ejercicio 10
-#La pizzería Bella Napoli ofrece pizzas vegetarianas y no 
+# Ejercicio 10
+# La pizzería Bella Napoli ofrece pizzas vegetarianas y no 
 # vegetarianas a sus clientes. Los ingredientes para cada 
 # tipo de pizza aparecen a continuación.
-
-    #Ingredientes vegetarianos: Pimiento y tofu.
-    #Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
-
-#Escribir un programa que pregunte al usuario si quiere una pizza 
+    # Ingredientes vegetarianos: Pimiento y tofu.
+    # Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
+# Escribir un programa que pregunte al usuario si quiere una pizza 
 # vegetariana o no, y en función de su respuesta le muestre un 
 # menú con los ingredientes disponibles para que elija. 
 # Solo se puede eligir un ingrediente además de la mozzarella 
@@ -579,8 +577,7 @@ print('el precio de la entrada es', precio, '€')
 # mostrar por pantalla si la pizza elegida es vegetariana o no 
 # y todos los ingredientes que lleva.
 
-
-
+'''
 # Presentación del menú con los tipos de pizza
 print("Bienvenido a la pizzeria Bella Napoli.\nTipos de pizza\n\t1- Vegetariana\n\t2- No vegetariana\n")
 tipo = input("Introduce el número correspondiente al tipo de pizza que quieres:")
@@ -603,16 +600,16 @@ else:
         print("jamón")
     else:
         print("salmón")
-
+'''
 
 
 
 #-------------------------------------------------------------------------------
-#region bucles
-#bucles
-#Ejercicio 1
-#Escribir un programa que pida al usuario una palabra y 
-#la muestre por pantalla 10 veces.
+# region bucles
+# bucles
+# Ejercicio 1
+# Escribir un programa que pida al usuario una palabra y 
+# la muestre por pantalla 10 veces.
 
 '''
 def palabra():
@@ -624,11 +621,8 @@ palabra()
 
 
 
-
-
-
-#Ejercicio 2
-#Escribir un programa que pregunte al usuario su edad y muestre 
+# Ejercicio 2
+# Escribir un programa que pregunte al usuario su edad y muestre 
 # por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 
 '''
@@ -641,102 +635,109 @@ edad()
 
 
 
-
-
-
-#Ejercicio 3
-#Escribir un programa que pida al usuario un número entero positivo 
+# Ejercicio 3
+# Escribir un programa que pida al usuario un número entero positivo 
 # y muestre por pantalla todos los números impares desde 1 hasta ese 
 # número separados por comas.
 
 '''
-def impares():
-    n = int(input('dime un numero: '))
-    for i in range(n):
-        if i %2 != 0:
-            print(i, end=',')
-impares()
+num = int(input('dame un numero entero positivo: '))
+for i in range(num):
+    if i %2 != 0:
+        print(i , end=',')
 '''
 
 
 
-
-
-#Ejercicio 4
-#Escribir un programa que pida al usuario un número entero positivo y 
+# Ejercicio 4
+# Escribir un programa que pida al usuario un número entero positivo y 
 # muestre por pantalla la cuenta atrás desde ese número hasta 
 # cero separados por comas.
 
 '''
-def cuentaatras():
-    n = int(input('dame un numero: '))
-    # desde n hasta 0 (-1), reduciendo de 2
-    for i in range(n, -1, -2):
-        print(i, end=',')
-cuentaatras()
+numero = int(input('dame un numero: '))
+    # desde numero hasta 0 (-1), reduciendo 2 en dos
+for i in range(numero, -1, -2):
+    print(i, end=',')
 '''
 
 
 
-
-
-#Ejercicio 5
-#Escribir un programa que pregunte al usuario una cantidad a invertir, 
+# Ejercicio 5
+# Escribir un programa que pregunte al usuario una cantidad a invertir, 
 # el interés anual y el número de años, y muestre por pantalla el capital 
 # obtenido en la inversión cada año que dura la inversión.
 
 '''
-def invertir():
-    invert = float(input('cantidad a invertir: '))
-    interes = float(input('a que intetes anual: '))
-    años = int(input('cuantos años: '))
-    for i in  range(años):
-        invert *= 1 + interes / 100
-    print(f'capital tras {años} años: {invert}')
-invertir()
+inversion = float(input('cantidad a invertir: '))
+interes = float(input('que interes? '))
+años = int(input('durante cuantos años: '))
+for i in range(años):
+    inversion *= 1 + interes / 100
+    print('capital tras', str(i+1), 'años: ', str(round(inversion, 2)))
 '''
 
 
 
-
-
-
-#Ejercicio 6
-#Escribir un programa que pida al usuario un número entero y 
+# Ejercicio 6
+# Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla un triángulo rectángulo como el de más abajo, 
 # de altura el número introducido.
 
+'''
+num = int(input('dame un numero entero: '))
+for i in range(num):
+    for j in range(i+1):
+        print("*", end="")
+    print("")
+'''
 
 
 
+# Ejercicio 7
+# Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
+
+'''
+for i in range(1,11):
+    for j in range(1,11):
+        print(i*j, end='\t')
+    print('')
+'''
 
 
 
-
-
-#Ejercicio 7
-#Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
-
-
-
-
-
-
-
-#Ejercicio 8
-#Escribir un programa que pida al usuario un número entero y 
+# Ejercicio 8
+# Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla un triángulo rectángulo como el de más abajo.
 
+'''
+numero = int(input('dame un numero entero: '))
+for i in range(1, numero+1, 2):
+    for j in range(i, 0, -2):
+        print(j, end='')
+    print('')
+'''
 
 
 
-
-
-
-#Ejercicio 9
-#Escribir un programa que almacene la cadena de caracteres 
+# Ejercicio 9
+# Escribir un programa que almacene la cadena de caracteres 
 # contraseña en una variable, pregunte al usuario por la contraseña 
 # hasta que introduzca la contraseña correcta.
+
+
+
+contraseña = '1234'
+dimeelpass = input('dime el pass: ')
+while dimeelpass != contraseña:
+    dimeelpass = input('escribe la contraseña: ')
+    print('no es la contraseña correcta ')
+print('hola bienvenido')
+
+
+
+
+
 
 '''
 def contraseña():
@@ -753,8 +754,8 @@ contraseña()
 
 
 
-#Ejercicio 10
-#Escribir un programa que pida al usuario un número entero y 
+# Ejercicio 10
+# Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla si es un número primo o no
 
 '''
@@ -775,8 +776,8 @@ entero()
 
 
 
-#Ejercicio 11
-#escribe un programa que pida al usuario una palabra y luego muesre por panatalla
+# Ejercicio 11
+# escribe un programa que pida al usuario una palabra y luego muesre por panatalla
 # una a una de las letras de la palabra introducida empezando por la última.
 
 '''
