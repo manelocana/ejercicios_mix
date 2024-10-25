@@ -725,32 +725,14 @@ for i in range(1, numero+1, 2):
 # contraseña en una variable, pregunte al usuario por la contraseña 
 # hasta que introduzca la contraseña correcta.
 
-
-
+'''
 contraseña = '1234'
 dimeelpass = input('dime el pass: ')
 while dimeelpass != contraseña:
     dimeelpass = input('escribe la contraseña: ')
     print('no es la contraseña correcta ')
 print('hola bienvenido')
-
-
-
-
-
-
 '''
-def contraseña():
-    contr = '1234'
-    user = ''
-    while user != contr:
-        user = str(input('cual es la contraseña: '))
-    print('bienvenido')
-contraseña()
-'''
-
-
-
 
 
 
@@ -773,9 +755,6 @@ entero()
 
 
 
-
-
-
 # Ejercicio 11
 # escribe un programa que pida al usuario una palabra y luego muesre por panatalla
 # una a una de las letras de la palabra introducida empezando por la última.
@@ -790,16 +769,12 @@ unauna()
 
 
 
-
-
-
-
 #-----------------------------------------------------------------------------------------------------
-#region listas y tuplas
+# region listas y tuplas
 # LISTAS Y TUPLAS
-#Ejercicio 1
-#Escribir un programa que almacene las asignaturas de un curso (por ejemplo matematicas, fisica
-#quimica, historia y lengua) en una lista y la muestre por pantalla
+# Ejercicio 1
+# Escribir un programa que almacene las asignaturas de un curso (por ejemplo matematicas, fisica
+# quimica, historia y lengua) en una lista y la muestre por pantalla
 
 '''
 asignaturas = ['mates', 'fisica', 'quimica', 'historia', 'lengua']
@@ -808,27 +783,25 @@ print(asignaturas)
 
 
 
-
-#Ejercicio 2
-#Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
+# Ejercicio 2
+# Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
 # Física, Química, Historia y Lengua) en una lista y la muestre por pantalla el mensaje
 #  Yo estudio <asignatura>, donde <asignatura> es cada una de las asignaturas de la lista.
 
 '''
 asignaturas = ['mates', 'fisica', 'quimica', 'historia', 'lengua']
-print(f'yo estudio {asignaturas[0]}, tambien estudio {asignaturas[1]}, tambien {asignaturas[2]}')
+#print(f'yo estudio {asignaturas[0]}, tambien estudio {asignaturas[1]}, tambien {asignaturas[2]}')
+for i in asignaturas:
+    print(f'yo estudio {i}')
 '''
 
 
 
-
-
-#Ejercicio 3
-#Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
+# Ejercicio 3
+# Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
 # Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en cada asignatura, 
 # y después las muestre por pantalla con el mensaje En <asignatura> has sacado <nota> donde <asignatura> 
-# es cada una des las asignaturas de la lista y <nota> cada una de las correspondientes notas introducidas por el usuario.
-
+# es cada una des las asignaturas de la lista y <nota> cada una de las correspondientes notas introducidas por el usuario
 
 '''
 asignaturas = ['mates', 'fisica', 'quimica', 'historia', 'lengua']
@@ -842,12 +815,8 @@ for i in range(len(asignaturas)):
     
 
 
-
-
-
-
-#Ejercicio 4
-#Escribir un programa que pregunte al usuario los números ganadores de la lotería primitiva, 
+# Ejercicio 4
+# Escribir un programa que pregunte al usuario los números ganadores de la lotería primitiva, 
 # los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
 
 '''
@@ -861,24 +830,19 @@ print(f'los numeros ganadores son {str(numeros)}')
 
 
 
-
-
-
-#Ejercicio 5
-#Escribir un programa que almacene en una lista los números del 1 al 10 
+# Ejercicio 5
+# Escribir un programa que almacene en una lista los números del 1 al 10 
 # y los muestre por pantalla en orden inverso separados por comas.
 
 '''
-n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(n[::-1], sep=',')
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(lista[::-1])
 '''
 
 
 
-
-
-#Ejercicio 6
-#Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
+# Ejercicio 6
+# Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
 # Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en 
 # cada asignatura y elimine de la lista las asignaturas aprobadas. Al final el programa debe mostrar
 #  por pantalla las asignaturas que el usuario tiene que repetir.
@@ -897,12 +861,11 @@ print(f'tienes que repetir {asignaturas}')
 
 
 
-
-
-
-#Ejercicio 7
-#Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras 
+# Ejercicio 7
+# Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras 
 # que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
+
+
 
 '''
 import string
@@ -917,8 +880,8 @@ print(abecedario_minusculas)
 
 
 
-#Ejercicio 8
-#Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
+# Ejercicio 8
+# Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
 
 '''
     # aqui convertimos en lista, para usar el metodo reverse(), solo funciona en listas
