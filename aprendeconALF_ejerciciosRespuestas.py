@@ -865,8 +865,6 @@ print(f'tienes que repetir {asignaturas}')
 # Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras 
 # que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
 
-
-
 '''
 import string
 abecedario_minusculas = list(string.ascii_lowercase)
@@ -876,7 +874,6 @@ for i in range(len(abecedario_minusculas),1,-1):
         abecedario_minusculas.pop(i-1)
 print(abecedario_minusculas)
 '''
-
 
 
 
@@ -907,27 +904,24 @@ else:
 
 
 
-
-#Ejercicio 9
-#Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
+# Ejercicio 9
+# Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
 
 '''
-word = input(str('dame una frase o palabra: '))
+palabra = str(input('dame una palabra: '))
 vocales = ['a', 'e', 'i', 'o', 'u']
 for i in vocales:
-    times = 0
-    for letter in word:
-        if letter == i:
-            times +=1
-    print(f'la vocal {i} aparece {str(times)} veces')
+    contador = 0
+    for letra in palabra:
+        if letra == i:
+            contador += 1
+    print(f'la vocal {i} aparace {contador} veces en la palabra {palabra}')
 '''
 
 
 
-
-
-#Ejercicio 10
-#Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, 
+# Ejercicio 10
+# Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, 
 # y muestre por pantalla el menor y el mayor de los precios.
 
 '''
@@ -956,10 +950,8 @@ print("El máximo es " + str(max_price))
 
 
 
-
-
-#Ejercicio 11
-#Escribir un programa que almacene los vectores (1,2,3) y (-1,0,2) en dos listas 
+# Ejercicio 11
+# Escribir un programa que almacene los vectores (1,2,3) y (-1,0,2) en dos listas 
 # y muestre por pantalla su producto escalar.
 
 '''
@@ -973,13 +965,10 @@ print("El producto de los vectores" + str(a) + " y " + str(b) + " es " + str(pro
 
 
 
-
-
-#Ejercicio 12
-#Escribir un programa que almacene las matrices
-#en una lista y muestre por pantalla su producto.
-#Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una lista.
-
+# Ejercicio 12
+# Escribir un programa que almacene las matrices
+# en una lista y muestre por pantalla su producto.
+# Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una lista.
 
 '''
     # esto no lo entiendo, copia/pega
@@ -1003,12 +992,8 @@ for i in range(len(result)):
 
 
 
-
-
-
-
-#Ejercicio 13
-#Escribir un programa que pregunte por una muestra de números, separados por comas, los guarde en una lista 
+# Ejercicio 13
+# Escribir un programa que pregunte por una muestra de números, separados por comas, los guarde en una lista 
 # y muestre por pantalla su media y desviación típica.
 
 '''
@@ -1031,12 +1016,8 @@ print('La media es', mean, ', y la desviación típica es', stdev)
 
 
 
-
-
-
-
 # ------------------------------------------------------------------------------------------------------------------------
-#region diccionarios
+# region diccionarios
 # DICCIONARIOS
 # Ejercicio 1
 # Escribir un programa que guarde en una variable el diccionario {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}, 
@@ -1056,8 +1037,6 @@ if moneda.title() in monedas:
 else:
     print("La divisa no está.")
 '''
-
-
 
 
 
@@ -1084,9 +1063,6 @@ print(persona['nombre'], 'tiene', persona['edad'], 'años, vive en', persona['di
 
 
 
-
-
-
 # Ejercicio 3
 # Escribir un programa que guarde en un diccionario los precios de las frutas de la tabla, 
 # pregunte al usuario por una fruta, un número de kilos y muestre por pantalla el precio de ese número 
@@ -1098,18 +1074,16 @@ print(persona['nombre'], 'tiene', persona['edad'], 'años, vive en', persona['di
 # Naranja 	0.70
 
 '''
-frutas = {'platano':1.35, 'manzana':0.80, 'pera':0.85, 'naranja':0.70}
-fruta = input('que fruta quieres?: ').lower()
-kg = float(input('cuantos kg quieres de esa fruta?: '))
-if fruta in frutas:
-    print(kg, 'kilos de', fruta, 'valen', frutas[fruta]*kg, '€')
-    print(f'{kg} kilos de {fruta} valen {frutas[fruta]*kg} €')
-else:
-    print(f'la fruta {fruta} no se encuentra')
-'''    
-
-
-
+def fruteria():
+    precios_frutas = {'platano':1.35, 'manzana':0.80, 'pera':0.85, 'naranja':0.70}
+    fruta = input('que fruta quiere?: ').lower()
+    kg = int(input('cuantos quilos?: '))
+    if fruta in precios_frutas:
+        print(f'{kg} quilos de {fruta}, valen {precios_frutas[fruta]*kg} €')
+    else:
+        print('la fruta no se encuentra en la lista')
+fruteria()
+'''
 
 
 
@@ -1124,9 +1098,6 @@ fecha = input('dame una fecha en formato dd/mm/aaaa: ')
 fecha = fecha.split('/')
 print(f'{fecha[0]} de {meses[int(fecha[1])]} de {fecha[2]}')
 '''
-
-
-
 
 
 
@@ -1147,15 +1118,12 @@ print('numero total de creditos del curso', creditos_totales)
 
 
 
-
-
 # Ejercicio 6
 # Escribir un programa que cree un diccionario vacío y lo vaya llenado con información sobre una persona 
 # (por ejemplo nombre, edad, sexo, teléfono, correo electrónico, etc.) que se le pida al usuario. Cada vez 
 # que se añada un nuevo dato debe imprimirse el contenido del diccionario.
 
 
-'''
 def diccionario():
     persona = {}
     continuar = True
@@ -1166,9 +1134,6 @@ def diccionario():
         print(persona)
         continuar = input('quieres añadir mas datos (si/no)? ') == 'si'
 diccionario()
-'''
-
-
 
 
 
