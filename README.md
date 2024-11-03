@@ -4,6 +4,14 @@
 Hola, 
 quería compartir una serie de ejercicios, con los que practicar y mejorar el lenguaje, 
 datos, bucles, listas, diccionarios etc... 
+
+Hacer un fork del archivo:  aprendeconalf_preguntas.py
+ahí estan los ejercicios, sin resolver
+
+en el archivo aprendeconalf_respuestas.py 
+están las soluciones
+
+
 sacados de la pagina de: www.aprendeconalf.es
 
 Estos ejercicios están resueltos a mi manera, que no quiere decir que sea la mas efectiva, ya que aún soy padawan hah
