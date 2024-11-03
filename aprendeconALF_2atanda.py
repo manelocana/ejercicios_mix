@@ -180,6 +180,7 @@ def interes_compuesto(inversion, interes, años):
 interes_compuesto(100, 4, 20) 
 '''
 
+
 # Ejercicio 12
 # Una panadería vende barras de pan a 3.49€ cada una. El pan que no es el día tiene un descuento del 60%. 
 # Escribir un programa que comience leyendo el número de barras vendidas que no son del día. 
