@@ -90,7 +90,7 @@ print('la suma de los numero desde 1 hasta ' + str(numero_entero) + ' es ' + str
 '''
 peso = float(input('cual es tu peso: '))
 altura = float(input('cual es tu altura: '))
-imc = peso / altura
+imc = peso / (altura*altura)
 print(f'tu indice de masa corporal es {imc}')
 '''
 
@@ -1123,7 +1123,7 @@ print('numero total de creditos del curso', creditos_totales)
 # (por ejemplo nombre, edad, sexo, teléfono, correo electrónico, etc.) que se le pida al usuario. Cada vez 
 # que se añada un nuevo dato debe imprimirse el contenido del diccionario.
 
-
+'''
 def diccionario():
     persona = {}
     continuar = True
@@ -1134,7 +1134,7 @@ def diccionario():
         print(persona)
         continuar = input('quieres añadir mas datos (si/no)? ') == 'si'
 diccionario()
-
+'''
 
 
 
@@ -1168,14 +1168,12 @@ lista_compra()
 
 
 
-
 #Ejercicio 8
 # Escribir un programa que cree un diccionario de traducción español-inglés. 
 # El usuario introducirá las palabras en español e inglés separadas por dos puntos, y 
 # cada par <palabra>:<traducción> separados por comas. El programa debe crear un diccionario con 
 # las palabras y sus traducciones. Después pedirá una frase en español y utilizará el diccionario para traducirla 
 # palabra a palabra. Si una palabra no está en el diccionario debe dejarla sin traducir.
-
 
 '''
 def traductor_palabras():
