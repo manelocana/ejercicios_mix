@@ -9,6 +9,6 @@ sacados de la pagina de: www.aprendeconalf.es
 Estos ejercicios están resueltos a mi manera, que no quiere decir que sea la mas efectiva, ya que aún soy padawan hah
 en algunos me ayudé con la solución
 
-### Gracias a www.aprendeconalf.es
+Gracias a www.aprendeconalf.es
 Ejercicios y mucho mas sobre cálculo, análisis... 
-merece una visita esta bien interesante 
+merece una visita, está bien interesante 
