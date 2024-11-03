@@ -170,7 +170,7 @@ juguetes()
 # la cantidad de ahorros tras el primer, segundo y tercer años. 
 # Redondear cada cantidad a dos decimales.
 
-
+'''
 def interes_compuesto(inversion, interes, años):
     interes /= 100
     invertido = inversion
@@ -178,8 +178,23 @@ def interes_compuesto(inversion, interes, años):
         invertido *= 1+interes
         print(f'tras el año {i} tienes: {round(invertido, 2)} €')
 interes_compuesto(100, 4, 20) 
+'''
 
+# Ejercicio 12
+# Una panadería vende barras de pan a 3.49€ cada una. El pan que no es el día tiene un descuento del 60%. 
+# Escribir un programa que comience leyendo el número de barras vendidas que no son del día. 
+# Después el programa debe mostrar el precio habitual de una barra de pan, el descuento que se le hace 
+# por no ser fresca y el coste final total.
 
+'''
+def panaderia(precio, descuento, pan_vendido):
+    precio_pan = precio 
+    descuento /= 100
+    venta = pan_vendido * precio_pan
+    calculo = venta * (1 - descuento)
+    return f'el precio total del pan con descuento es: {calculo:.2f} €'
+print(panaderia(3.49, 60, 20))
+'''
 
 
 #region cadenas
@@ -188,10 +203,13 @@ interes_compuesto(100, 4, 20)
 # y un número entero e imprima por pantalla en líneas distintas 
 # el nombre del usuario tantas veces como el número introducido.
 
-
-
-
-
+'''
+def repeticion():
+    nombre = input('dame un nombre: ')
+    numero = int(input('ahora dame un numero: '))
+    print((nombre + '\n') * numero)
+repeticion()
+'''
 
 
 #Ejercicio 2
