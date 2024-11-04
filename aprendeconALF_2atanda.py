@@ -224,6 +224,7 @@ repeticion()
 
 
 def nombre_completo():
+    pass
     
 
 
