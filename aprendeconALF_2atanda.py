@@ -223,7 +223,8 @@ repeticion()
 # minúsculas como quiera.
 
 
-
+def nombre_completo():
+    
 
 
 
