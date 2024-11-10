@@ -222,13 +222,15 @@ repeticion()
 # El usuario puede introducir su nombre combinando mayúsculas y 
 # minúsculas como quiera.
 
-
+'''
 def nombre_completo():
-    pass
+    nombre = input('dame un nombre completo: ')
+    print(nombre.lower())
+    print(nombre.capitalize())
+    print(nombre.upper())
+nombre_completo()
+'''
     
-
-
-
 
 #Ejercicio 3
 #Escribir un programa que pregunte el nombre del usuario en la consola y 
@@ -236,11 +238,12 @@ def nombre_completo():
 # tiene <n> letras, donde <NOMBRE> es el nombre de usuario en mayúsculas y 
 # <n> es el número de letras que tienen el nombre.
 
-
-
-
-
-
+'''
+def nombre_usuario():
+    nombre = input('dame un nombre: ')
+    print(f'el nombre {nombre.upper()} tiene {len(nombre)} letras')
+nombre_usuario()
+'''
 
 
 #Ejercicio 4
@@ -251,12 +254,12 @@ def nombre_completo():
 # formato y muestre por pantalla el número de teléfono sin el prefijo y 
 # la extensión.
 
-
-
-
-
-
-
+'''
+def prefijos():
+    numero = input('dame un numero de telf con este formato: xx-xxxxxxxxx-xx ')
+    print(numero[3:-3])
+prefijos()
+'''
 
 
 #Ejercicio 5
