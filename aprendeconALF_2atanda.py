@@ -266,10 +266,12 @@ prefijos()
 #Escribir un programa que pida al usuario que introduzca una frase en 
 # la consola y muestre por pantalla la frase invertida.
 
-
-
-
-
+'''
+def frase_invertida():
+    frase  = input('dime una frase, que te la invierto: ')
+    print(frase[::-1])
+frase_invertida()
+'''
 
 
 #Ejercicio 6
@@ -277,10 +279,13 @@ prefijos()
 # en la consola y una vocal, y después muestre por pantalla la misma 
 # frase pero con la vocal introducida en mayúscula.
 
-
-
-
-
+'''
+def vocal_mayus():
+    frase = input('dame una frase: ')
+    vocal = input('ahora una vocal: ')
+    print(frase.replace(vocal, vocal.upper()))
+vocal_mayus()
+'''
 
 
 #Ejercicio 7
@@ -288,11 +293,12 @@ prefijos()
 # en la consola y muestre por pantalla otro correo electrónico con el 
 # mismo nombre (la parte delante de la arroba @) pero con dominio ceu.es.    
 
-
-
-
-
-
+'''
+def correo():
+    correo = input('dame un correo electronico: ')
+    print(correo[:correo.find('@')] + '@ceu.es')
+correo()
+'''
 
 
 #Ejercicio 8
@@ -300,11 +306,12 @@ prefijos()
 # de un producto en euros con dos decimales y muestre por pantalla 
 # el número de euros y el número de céntimos del precio introducido.
 
-
-
-
-
-
+'''
+def precio():
+    precio = input('dame un precio con dos decimales (separado por punto): ')
+    print(precio[:precio.find('.')], 'euros y', precio[precio.find('.') +1 :], 'centimos')
+precio()
+'''
 
 
 #Ejercicio 9
@@ -313,11 +320,12 @@ prefijos()
 # Adaptar el programa anterior para que también funcione cuando el día 
 # o el mes se introduzcan con un solo carácter.
 
-
-
-
-
-
+'''
+def nacimiento():
+    fecha = input('fecha de nacimiento (dd/mm/aaaa): ')
+    print('dia:', fecha[:2], 'mes:', fecha[3:5], 'año:', fecha[6:])
+nacimiento()
+'''
 
 
 #Ejercicio 10
@@ -325,11 +333,12 @@ prefijos()
 # de una cesta de la compra, separados por comas, y muestre por 
 # pantalla cada uno de los productos en una línea distinta.
 
-
-
-
-
-
+'''
+def cesta_compra():
+    compra = input('dime la lista de la compra: ')
+    print(compra.replace(',', '\n'))
+cesta_compra()
+'''
 
 
 #Ejercicio 11
