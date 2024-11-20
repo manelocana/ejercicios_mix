@@ -342,15 +342,22 @@ cesta_compra()
 
 
 #Ejercicio 11
-#Escribir un programa que pregunte el nombre el un producto, 
+#Escribir un programa que pregunte el nombre del un producto, 
 # su precio y un número de unidades y muestre por pantalla una cadena 
 # con el nombre del producto seguido de su precio unitario con 6 dígitos 
 # enteros y 2 decimales, el número de unidades con tres dígitos 
 # y el coste total con 8 dígitos enteros y 2 decimales.
 
-
-
-
+'''
+def productos():
+    producto = input('producto: ')
+    precio = float(input('precio: '))
+    unidades = int(input('unidades: '))
+    coste = precio * unidades
+    print(f'el producto', producto, 'tiene un precio de', precio, 'numero de unidades:', unidades)
+    print(f'el precio total del pedido es', coste, '€')
+productos()
+'''
 
 
 #region condicionales
@@ -358,10 +365,15 @@ cesta_compra()
 #Escribir un programa que pregunte al usuario su edad y 
 #muestre por pantalla si es mayor de edad o no.
 
-
-
-
-
+'''
+def edad():
+    edad = int(input('dime tu edad: '))
+    if edad < 18:
+        print('eres menor')
+    else:
+        print('eres mayor')
+edad()
+'''
 
 
 #Ejercicio 2
@@ -371,7 +383,17 @@ cesta_compra()
 # guardada en la variable sin tener en cuenta mayúsculas y minúsculas.
 
 
-
+def contraseña():
+    contraseña = input('dime la contraseña (5 intentos): ')
+    intentos = 0
+    contraseña_original = '1234'
+    while intentos <= 5:
+        if contraseña == contraseña_original:
+            print('bienvenido, contraseña correcta')
+        else: 
+            print('contraseña incorrecta, vuelve a intentarlo')
+            intentos += 1
+contraseña()
 
 
 
