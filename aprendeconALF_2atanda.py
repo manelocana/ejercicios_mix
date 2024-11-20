@@ -405,21 +405,32 @@ contraseña()
 # muestre por pantalla su división. Si el divisor es cero el 
 # programa debe mostrar un error.
 
-
-
-
-
-
+'''
+def division():
+    n1 = int(input('dame el primer numero: '))
+    n2 = int(input('dame el segundo numero: '))
+    division = n1 / n2
+    if division == 0:
+        print('error')
+    else:
+        print(division)
+division()    
+'''
 
 
 #Ejercicio 4
 #Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla si es par o impar.
 
-
-
-
-
+'''
+def par():
+    num = int(input('dame un numero entero: '))
+    if num %2 == 0:
+        print('es par')
+    else: 
+        print('impar')
+par()
+'''
 
 
 #Ejercicio 5
@@ -429,11 +440,16 @@ contraseña()
 # sus ingresos mensuales y muestre por pantalla si el usuario 
 # tiene que tributar o no.
 
-
-
-
-
-
+'''
+def impuesto():
+    edad = int(input('dame tu edad: '))
+    ingresos = int(input('dime tus ingresos mensuales: '))
+    if edad >= 16 or ingresos >= 1000:
+        print('tienes que tributar')
+    else: 
+        print('no tributas')
+impuesto()
+'''
 
 
 #Ejercicio 6
@@ -445,7 +461,18 @@ contraseña()
 # y muestre por pantalla el grupo que le corresponde.
 
 
-
+def curso():
+    grupo_A = {}
+    grupo_B = {}
+    nombre = str(input('dame tu nombre: '))
+    sexo = str(input('sexo, hombre/mujer: (H/M)'))
+    if nombre < 'm' and sexo == 'h':
+        grupo_A.
+        print('grupo_A')
+    else: 
+        grupo_B.append()
+        print('grupo_B')
+curso()
 
 
 
