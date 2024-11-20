@@ -382,21 +382,22 @@ edad()
 # pantalla si la contraseña introducida por el usuario coincide con la 
 # guardada en la variable sin tener en cuenta mayúsculas y minúsculas.
 
-
+'''
 def contraseña():
-    contraseña = input('dime la contraseña (5 intentos): ')
+    contraseña = ''
     intentos = 0
     contraseña_original = '1234'
-    while intentos <= 5:
+    while intentos < 5:
+        contraseña = input('dime la contraseña (5 intentos): ')
         if contraseña == contraseña_original:
             print('bienvenido, contraseña correcta')
+            break
         else: 
             print('contraseña incorrecta, vuelve a intentarlo')
             intentos += 1
+            print(f'{intentos} intento')
 contraseña()
-
-
-
+'''
 
 
 #Ejercicio 3
