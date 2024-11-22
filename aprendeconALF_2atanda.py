@@ -460,22 +460,16 @@ impuesto()
 # Escribir un programa que pregunte al usuario su nombre y sexo, 
 # y muestre por pantalla el grupo que le corresponde.
 
-
+'''
 def curso():
-    grupo_A = {}
-    grupo_B = {}
     nombre = str(input('dame tu nombre: '))
     sexo = str(input('sexo, hombre/mujer: (H/M)'))
     if nombre < 'm' and sexo == 'h':
-        grupo_A.
-        print('grupo_A')
+        print('perteneces al grupo_A')
     else: 
-        grupo_B.append()
-        print('grupo_B')
+        print('eres del grupo_B')
 curso()
-
-
-
+'''
 
 
 #Ejercicio 7
@@ -490,12 +484,21 @@ curso()
 #Escribir un programa que pregunte al usuario su renta anual y 
 # muestre por pantalla el tipo impositivo que le corresponde.
 
-
-
-
-
-
-
+'''
+def renta():
+    renta = int(input('cual es su renta anual: '))
+    if renta < 10000:
+        print('se te impone el 5%')
+    elif renta > 10000 and renta < 20000:
+        print('tributas el 15%')
+    elif renta > 20000 and renta < 35000:
+        print('tributas el 20%')
+    elif renta > 35000 and renta < 60000:
+        print('tributas el 30%')
+    else:
+        print('pagas el 45%')
+renta()
+'''
 
 
 #Ejercicio 8
@@ -515,10 +518,20 @@ curso()
 #Escribir un programa que lea la puntuación del usuario e indique su nivel 
 # de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 
-
-
-
-
+'''
+def puntuaciones():
+    puntos = float(input('que puntuacion obtuviste: '))
+    if puntos == 0.0:
+        print('nivel inaceptable')
+    elif puntos == 0.4:
+        print('nivel aceptable')
+    elif puntos >= 0.6:
+        print('nivel meritorio!')
+    else:
+        print('puntuacion no valida')
+    print(f'con una puntuacion de {puntos} recibes {2400 * puntos} €')
+puntuaciones()
+'''
 
 
 #Ejercicio 9
@@ -531,10 +544,26 @@ curso()
 # y si es mayor de 18 años, 10€.
 
 
+def entrada():
+    edad = int(input('que edad tienes: '))
+    if edad < 4:
+        print('entrada gratis')
+    elif edad > 4 and edad < 18:
+        print('pagas 5€')
+    else:
+        print('pagas 10€')
 
 
-
-
+def entrada2():
+    edad = int(input('que edad tienes: '))
+    if edad < 4:
+        precio = 0
+    elif edad > 4 and edad < 18:
+        precio = 5
+    else: 
+        precio = 10
+    print(f'con {edad} años, pagas {precio}€')
+entrada2()
 
 
 
