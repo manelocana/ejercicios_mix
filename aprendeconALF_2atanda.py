@@ -615,14 +615,13 @@ bucle_10()
 #Escribir un programa que pregunte al usuario su edad y muestre 
 # por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 
-
-
-
-
-
-
-
-
+'''
+def edad():
+    edad = int(input('dime tu edad: '))
+    for i in range(edad):
+        print(i+1)
+edad()
+'''
 
 
 #Ejercicio 3
@@ -631,8 +630,14 @@ bucle_10()
 # número separados por comas.
 
 
-
-
+def enteroposi():
+    num = int(input('dame un entero positivo: '))
+    for i in range(1,num):
+        if i %2 == 0:
+            return 'es par'
+        else: 
+            print(i)
+enteroposi()
 
 
 
