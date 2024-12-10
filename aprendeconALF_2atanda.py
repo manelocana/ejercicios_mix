@@ -629,17 +629,18 @@ edad()
 # y muestre por pantalla todos los números impares desde 1 hasta ese 
 # número separados por comas.
 
-
+'''
 def enteroposi():
-    num = int(input('dame un entero positivo: '))
-    for i in range(1,num):
-        if i %2 == 0:
-            return 'es par'
-        else: 
-            print(i)
+    try:
+        num = int(input('dame un entero positivo: '))
+    except ValueError:
+        print('te dije un numero positivo perro')
+    else:
+        for i in range(num+1):
+            if i %2 != 0:
+                print(i, end=',')
 enteroposi()
-
-
+'''
 
 
 #Ejercicio 4
@@ -647,10 +648,18 @@ enteroposi()
 # muestre por pantalla la cuenta atrás desde ese número hasta 
 # cero separados por comas.
 
+'''
+def cuenta_atras():
+    num = int(input('dame un entero positivo: '))
+    lista = []
+    for i in range(num+1):
+        lista.append(i)
+    print(lista[::-1])
 
-
-
-
+    for i in range(num, 1, -1):
+        print(i-2, end=',')
+cuenta_atras()
+'''
 
 
 #Ejercicio 5
@@ -658,10 +667,16 @@ enteroposi()
 # el interés anual y el número de años, y muestre por pantalla el capital 
 # obtenido en la inversión cada año que dura la inversión.
 
-
-
-
-
+'''
+def inversion():
+    invertir = float(input('cuanto inviertes? '))
+    interes = float(input('a que interes? '))
+    años = int(input('cuantos años? '))
+    for i in range(años):
+        invertir *= 1 + interes / 100
+        print('capital tras', str(i+1), 'años: ', str(round(invertir, 2)))
+inversion()
+'''
 
 
 #Ejercicio 6
@@ -669,31 +684,41 @@ enteroposi()
 # muestre por pantalla un triángulo rectángulo como el de más abajo, 
 # de altura el número introducido.
 
-
-
-
-
-
-
+'''
+def triangulo():
+    numero = int(input('dame un numero entero: '))
+    for i in range(numero): 
+        for j in range(i+1):
+            print('*', end='')
+        print('')        
+triangulo()
+'''
 
 
 #Ejercicio 7
 #Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
 
-
-
-
-
+'''
+def tabla():
+    for i in range(1,11):
+        for j in range(1,11):
+            print(i*j, end='\t')
+        print('')
+tabla()
+'''
 
 
 #Ejercicio 8
 #Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla un triángulo rectángulo como el de más abajo.
 
-
-
-
-
+'''
+numero = int(input('dame un numero entero: '))
+for i in range(1, numero+1, 2):
+    for j in range(i, 0, -2):
+        print(j, end='')
+    print('')
+'''
 
 
 #Ejercicio 9
@@ -701,11 +726,13 @@ enteroposi()
 # contraseña en una variable, pregunte al usuario por la contraseña 
 # hasta que introduzca la contraseña correcta.
 
-
-
-
-
-
+'''
+contraseña = '1234'
+contraseña_usuario = input('dame una contraseña: ')
+while contraseña != contraseña_usuario:
+    contraseña_usuario = input('vuelve a intentarlo: ')
+print('contraseña correcta')
+'''
 
 
 #Ejercicio 10
