@@ -374,6 +374,11 @@ def edad():
         print('eres mayor')
 edad()
 '''
+'''
+# aqui lo mismo en shorthand (en una linea)
+edad = int(input('dime tu edad: '))
+print('eres menor' if edad<18 else 'eres mayor')
+'''
 
 
 #Ejercicio 2
@@ -583,16 +588,32 @@ entrada2()
 # mostrar por pantalla si la pizza elegida es vegetariana o no 
 # y todos los ingredientes que lleva.
 
+'''
+# respuesta copiada
 
-def pizzeria():
-    vegeta = ['pimiento', 'tofu']
-    carnivoro = ['peperoni', 'jamon', 'salmon']
-    pizza = int(input('quiers pizza vegetariana(1) o pizza carnivora(2): (1/2)'))
-    if pizza == 1:
-        print(f'elige un ingrediente: {vegeta}')
-
-
-
+# Presentación del menú con los tipos de pizza
+print("Bienvenido a la pizzeria Bella Napoli.\nTipos de pizza\n\t1- Vegetariana\n\t2- No vegetariana\n")
+tipo = input("Introduce el número correspondiente al tipo de pizza que quieres:")
+# Decisión sobre el tipo de pizza
+if tipo == "1":
+    print("Ingredientes de pizzas vegetarianas\n\t 1- Pimiento\n\t2- Tofu\n")
+    ingrediente = input("Introduce el ingrediente que deseas: ")
+    print("Pizza vegetariana con mozzarella, tomate y ", end="")
+    if ingrediente == "1":
+        print("pimiento")
+    else: 
+        print("tofu")
+else:
+    print("Ingredientes de pizzas no vegetarianas\n\t1- Peperoni\n\t2- Jamón\n\t3- Salmón\n")
+    ingrediente = input("Introduce el ingrediente que deseas: ")
+    print("Pizza no vegetarina con mozarrella, tomate y ", end="")
+    if ingrediente == "1":
+        print("peperoni")
+    elif ingrediente == "2":
+        print("jamón")
+    else:
+        print("salmón")
+'''
 
 
 #region bucles
@@ -739,22 +760,51 @@ print('contraseña correcta')
 #Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla si es un número primo o no
 
+'''
+def entero():
+    numero = int(input('dame un numero mayor a 2: '))
+    if numero <= 1:
+        print(f'{numero} No es primo, el numero debe ser mayor a 1')
+    i = 2
+    while numero % i != 0:
+        i += 1
+    if i == numero:
+        print(f'{numero} es primo')
+    else:
+        print(f'{numero} NO es primo')
+entero()
+'''
 
-
-
-
-
+'''
+#lo hacemos con la raiz cuadrada:   int(numero**0.5) + 1
+numero = int(input('dame un numero entero mayor a 1: '))
+if numero <= 1:
+    print(f'{numero} no es primo, tiene q ser mayor a 1 idiota')
+else:
+    num_primo = True
+    for i in range(2, int(numero**0.5) + 1):
+        if numero % i == 0:
+            num_primo = False
+            break  
+    if num_primo:
+        print(f'{numero} es primo.')
+    else:
+        print(f'{numero} no es primo, ya que es divisible por {i}')
+'''
 
 
 #Ejercicio 11
 #escribe un programa que pida al usuario una palabra y luego muesre por panatalla
 # una a una de las letras de la palabra introducida empezando por la última.
 
-
-
-
-
-
+'''
+# dos maneras de hacerlo
+palabra = input('dame una palabra: ')
+palabra_invertida = palabra[::-1]
+for i in range(len(palabra) -1, -1, -1,):
+        print(palabra[i], end='')
+print(f'\n{palabra_invertida}')
+'''
 
 
 #region listas y tuplas
@@ -762,11 +812,10 @@ print('contraseña correcta')
 #Escribir un programa que almacene las asignaturas de un curso (por ejemplo matematicas, fisica
 #quimica, historia y lengua) en una lista y la muestre por pantalla
 
-
-
-
-
-
+'''
+asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+print(asignaturas)
+'''
 
 
 #Ejercicio 2
@@ -774,12 +823,12 @@ print('contraseña correcta')
 # Física, Química, Historia y Lengua) en una lista y la muestre por pantalla el mensaje
 #  Yo estudio <asignatura>, donde <asignatura> es cada una de las asignaturas de la lista.
 
-
-
-
-
-
-
+'''
+asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+for i in asignaturas:
+    print(f' yo estudio {i}', end=',')
+print('')
+'''
 
 
 #Ejercicio 3
