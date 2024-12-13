@@ -837,34 +837,42 @@ print('')
 # y después las muestre por pantalla con el mensaje En <asignatura> has sacado <nota> donde <asignatura> 
 # es cada una des las asignaturas de la lista y <nota> cada una de las correspondientes notas introducidas por el usuario.
 
-
-
-
-
+'''
+asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+notas = []
+for i in asignaturas:
+    nota = int(input(f'que nota has sacado en {i}: '))
+    notas.append(nota)
+for i in range(len(asignaturas)):
+    print(f'en {asignaturas[i]} has sacado {notas[i]}',  end=',')
+'''
 
 
 #Ejercicio 4
 #Escribir un programa que pregunte al usuario los números ganadores de la lotería primitiva, 
 # los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
 
+'''
+contador = 0
+listado = []
+while contador < 5:
+    numeros = int(input('dame los numermos de la loteria: '))
+    listado.append(numeros)
+    contador += 1
+print(sorted(listado))
+'''
 
-
-
-
-
-
-
+ 
 #Ejercicio 5
 #Escribir un programa que almacene en una lista los números del 1 al 10 
 # y los muestre por pantalla en orden inverso separados por comas.
 
-
-
-
-
-
-
-
+'''
+numeros = []
+for i in range(1,11):
+    numeros.append(i)
+print(numeros[::-1])
+'''
 
 
 #Ejercicio 6
@@ -873,20 +881,30 @@ print('')
 # cada asignatura y elimine de la lista las asignaturas aprobadas. Al final el programa debe mostrar
 #  por pantalla las asignaturas que el usuario tiene que repetir.
 
-
-
-
-
+'''
+suspenso = []
+asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+for i in asignaturas:
+    nota = int(input(f'que nota has sacado en {i}: '))
+    if nota < 5:
+        suspenso.append(i)
+print(f'tienes que repetir {suspenso}')
+'''
 
 
 #Ejercicio 7
 #Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras 
 # que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
 
-
-
-
-
+'''
+#con ayuda para lo del string
+import string
+abecedario = list(string.ascii_lowercase)
+for i in range(len(abecedario),1,-1):
+    if i %3 == 0:
+        abecedario.pop(i-1)
+print(abecedario)
+'''
 
 
 #Ejercicio 8
