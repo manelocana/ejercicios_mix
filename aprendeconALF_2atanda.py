@@ -910,23 +910,29 @@ print(abecedario)
 #Ejercicio 8
 #Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
 
-
-
-
-
-
-
+'''
+palabra = input('dame una palabra a ver si es palindromo: ')
+print(palabra[::-1])
+if palabra == palabra[::-1]:
+    print('es palindromo')
+else:
+    print('NO es palindromo')
+'''
 
 
 #Ejercicio 9
 #Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
 
-
-
-
-
-
-
+'''
+vocales = ['a','e','i','o','u']
+palabra = input('dame una palabra: ')
+for i in vocales:
+    contador = 0
+    for letra in palabra:
+        if letra == i:
+            contador += 1
+    print(f'la vocal {i} aparace {contador} veces en la palabra {palabra}')
+'''
 
 
 #Ejercicio 10
@@ -934,9 +940,10 @@ print(abecedario)
 # y muestre por pantalla el menor y el mayor de los precios.
 
 
-
-
-
+precios = ['50', '75', '46', '22', '80', '65', '8']
+precios_orden = precios.sort()
+print(precios_orden[0])
+print(precios_orden[::-1])
 
 
 
