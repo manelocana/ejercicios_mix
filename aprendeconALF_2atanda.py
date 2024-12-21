@@ -939,24 +939,25 @@ for i in vocales:
 #Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, 
 # y muestre por pantalla el menor y el mayor de los precios.
 
-
-precios = ['50', '75', '46', '22', '80', '65', '8']
-precios_orden = precios.sort()
-print(precios_orden[0])
-print(precios_orden[::-1])
-
+'''
+precios = (50, 75, 46, 22, 80, 65, 8)
+precio_minimo = min(precios)
+precio_maximo = max(precios)
+print(f'el numero mas grande es: {precio_maximo}')
+print(f'el mas pequeño: {precio_minimo}')
+new_precio = sorted(precios)
+print(new_precio[0])
+print(new_precio[-1])
+'''
 
 
 #Ejercicio 11
 #Escribir un programa que almacene los vectores (1,2,3) y (-1,0,2) en dos listas 
 # y muestre por pantalla su producto escalar.
 
-
-
-
-
-
-
+'''
+uuhhhh
+'''
 
 
 #Ejercicio 12
@@ -988,21 +989,38 @@ print(precios_orden[::-1])
 # Escribir un programa que guarde en una variable el diccionario {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}, 
 # pregunte al usuario por una divisa y muestre su símbolo o un mensaje de aviso si la divisa no está en el diccionario.
 
-
-
-
-
-
-
+'''
+monedas = {'euro':'€', 'dollar':'D', 'yen':'Y'}
+moneda = input('dime una moneda (euro, dollar o yen): ')
+print(monedas.get(moneda.lower(), 'escribe bien, elige una moneda de la lista'))
+''' 
+'''
+monedas = {'euro':'€', 'dollar':'D', 'yen':'Y'}
+moneda = input('dime una moneda (euro, dollar o yen): ')
+if moneda in monedas:
+    print(monedas[moneda.lower()])
+else:
+    print('esa moneda no esta en la lista')
+'''
 
 
 # Ejercicio 2
 # Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario. 
 # Después debe mostrar por pantalla el mensaje <nombre> tiene <edad> años, vive en <dirección> y su número de teléfono es <teléfono>.
 
-
-
-
+'''
+nombre = input('dame tu nombre: ')
+edad = int(input('que edad tienes: '))
+direccion = input('donde vives: ')
+telefono = int(input('numero telefono: '))
+datos = {
+    'nombre': nombre,
+    'edad': edad,
+    'direccion': direccion,
+    'telefono': telefono
+}
+print(f'{nombre} tiene {edad} años, vive en {direccion} y su numero de telefono es {telefono}')
+'''
 
 
 # Ejercicio 3
@@ -1015,13 +1033,19 @@ print(precios_orden[::-1])
 # Pera 	0.85
 # Naranja 	0.70
 
-
-
-
-
-
-
-
+'''
+frutas = {
+    'platano': 1.35,
+    'manzana': 0.80,
+    'pera': 0.85,
+    'naranja': 0.70
+}
+fruta = input('que fruta quiere: ').lower()
+kilos = float(input('cuantos quilos: '))
+if fruta in frutas:
+    precio = frutas[fruta] * kilos
+print(f'{kilos} kg de {fruta} valen {precio:.2f} €' if fruta in frutas else 'no tenemos esa fruta, mira la lista')
+'''
 
 
 # Ejercicio 4
