@@ -994,6 +994,7 @@ monedas = {'euro':'€', 'dollar':'D', 'yen':'Y'}
 moneda = input('dime una moneda (euro, dollar o yen): ')
 print(monedas.get(moneda.lower(), 'escribe bien, elige una moneda de la lista'))
 ''' 
+
 '''
 monedas = {'euro':'€', 'dollar':'D', 'yen':'Y'}
 moneda = input('dime una moneda (euro, dollar o yen): ')
