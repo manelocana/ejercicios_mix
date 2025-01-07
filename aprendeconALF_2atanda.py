@@ -1054,8 +1054,12 @@ print(f'{kilos} kg de {fruta} valen {precio:.2f} €' if fruta in frutas else 'n
 
 
 
-
-
+#fecha = input('dame una fecha en formato dd/mm/aaaa')
+mes =  {
+    'enero':1, 'febrero':2, 'marzo':3, 'abril':4, 'mayo':5, 'junio':6, 'julio':7, 'agosto':8, 'septiembre':9,
+    'octubre':10, 'noviembre':11, 'diciembre':12
+}
+#print(f'{fecha[]}')
 
 
 
@@ -1200,27 +1204,45 @@ print(f'{kilos} kg de {fruta} valen {precio:.2f} €' if fruta in frutas else 'n
 # Ejercicio 1
 # Escribir una función que muestre por pantalla el saludo ¡Hola amiga! cada vez que se la invoque.
 
-
-
-
-
+'''
+def saludo():
+    print('hola')
+saludo()
+'''
 
 
 # Ejercicio 2
 # Escribir una función a la que se le pase una cadena <nombre> y muestre por pantalla el saludo ¡hola <nombre>!.
 
-
-
-
-
+'''
+def saludo_personal():
+    nombre = 'manel'
+    print(f'hola {nombre}')
+saludo_personal()
+'''
 
 
 # Ejercicio 3
 # Escribir una función que reciba un número entero positivo y devuelva su factorial.
 
-
-
-
+'''
+def factorial():
+    cuenta = 1
+    numero = int(input('dame un entero positivo: '))
+    for i in range(numero):
+        cuenta *= i+1
+        print(cuenta)
+factorial()        
+'''
+'''
+def factorial(numero):
+    cuenta = 1
+    for i in range(numero):
+        cuenta *= i+1
+        print(cuenta)
+    return cuenta
+print(factorial(5))
+'''
 
 
 # Ejercicio 4
@@ -1228,21 +1250,27 @@ print(f'{kilos} kg de {fruta} valen {precio:.2f} €' if fruta in frutas else 'n
 # La función debe recibir la cantidad sin IVA y el porcentaje de IVA a aplicar, y devolver el total 
 # de la factura. Si se invoca la función sin pasarle el porcentaje de IVA, deberá aplicar un 21%.
 
-
-
-
-
-
-
+'''
+def total_factura(precio, iva=21):
+    total = precio + (precio * iva) / 100
+    return total
+print(total_factura(123,15))
+'''
 
 
 # Ejercicio 5
 # Escribir una función que calcule el área de un círculo y otra que calcule el volumen de un cilindro usando la primera función.
 
+'''
+def area_circulo(r):
+    from math import pi as pi
+    return pi * r**2
 
+def volumen_cilindro(r, h):
+    return area_circulo(r) * h
 
-
-
+print(volumen_cilindro(3, 5))
+'''
 
 
 
