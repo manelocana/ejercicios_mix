@@ -543,7 +543,7 @@ puntuaciones()
 # puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ 
 # y si es mayor de 18 años, 10€.
 
-
+'''
 def entrada():
     edad = int(input('que edad tienes: '))
     if edad < 4:
@@ -552,7 +552,7 @@ def entrada():
         print('pagas 5€')
     else:
         print('pagas 10€')
-
+entrada()
 
 def entrada2():
     edad = int(input('que edad tienes: '))
@@ -564,8 +564,7 @@ def entrada2():
         precio = 10
     print(f'con {edad} años, pagas {precio}€')
 entrada2()
-
-
+'''
 
 
 #Ejercicio 10
@@ -585,7 +584,12 @@ entrada2()
 # y todos los ingredientes que lleva.
 
 
-
+def pizzeria():
+    vegeta = ['pimiento', 'tofu']
+    carnivoro = ['peperoni', 'jamon', 'salmon']
+    pizza = int(input('quiers pizza vegetariana(1) o pizza carnivora(2): (1/2)'))
+    if pizza == 1:
+        print(f'elige un ingrediente: {vegeta}')
 
 
 
