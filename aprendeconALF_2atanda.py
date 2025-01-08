@@ -1274,37 +1274,29 @@ print(volumen_cilindro(3, 5))
 '''
 
 
-
-
-
-
 # Ejercicio 6
 # Escribir una función que reciba una muestra de números en una lista y devuelva su media.
 
-
-
-
-
-
-
-
-
-
-
+'''
+def media():
+    numeros = [2,4,8,5,54,23,44,65,76]
+    print(sum(numeros)/ len(numeros))
+media()
+'''
 
 
 # Ejercicio 7
 # Escribir una función que reciba una muestra de números en una lista y devuelva otra lista con sus cuadrados.
 
-
-
-
-
-
-
-
-
-
+'''
+def cuadrados():
+    numeros = [2,4,8,5,54,23,44,65,76]
+    lista_cuadrados = []
+    for i in numeros:
+        lista_cuadrados.append(i*i)
+    print(lista_cuadrados)
+cuadrados()
+'''        
 
 
 # Ejercicio 8
