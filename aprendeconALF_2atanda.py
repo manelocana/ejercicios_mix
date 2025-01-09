@@ -1303,21 +1303,48 @@ cuadrados()
 # Escribir una función que reciba una muestra de números en una lista y devuelva un diccionario con su media, 
 # varianza y desviación típica.
 
+'''
+numeros = [2,4,8,5,54,23,44,65,76]
 
+def media():
+    return sum(numeros) / len(numeros)
 
+def cuadrado():
+    cuadrados = []
+    for i in numeros:
+        cuadrados.append(i*i)
+    return cuadrados
+   
+def varianza():
+    lista = []
+    for i in numeros:
+        calculo = (i - media())**2
+        lista.append(calculo)
+    return sum(lista) / len(lista)
 
+def desviacion():
+    from math import sqrt as raiz #sqrt es la raiz completa //  isqrt es la raiz entera
+    return raiz(varianza())
 
+result = {
+    'media' : f'{media():.2f}',
+    'varianza' : f'{varianza():.2f}',
+    'desviacion' : desviacion()
+}
 
-
-
-
-
-
+print(result)
+'''
 
 # Ejercicio 9
 # Escribir una función que calcule el máximo común divisor de dos números y otra que calcule el mínimo común múltiplo.
 
 
+def maximo_comun_divisor(n1, n2):
+    pass
+
+
+def minimo_comun_multiplo(n1, n2):
+    pass
 
 
 
