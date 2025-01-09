@@ -374,6 +374,11 @@ def edad():
         print('eres mayor')
 edad()
 '''
+'''
+# aqui lo mismo en shorthand (en una linea)
+edad = int(input('dime tu edad: '))
+print('eres menor' if edad<18 else 'eres mayor')
+'''
 
 
 #Ejercicio 2
@@ -583,16 +588,32 @@ entrada2()
 # mostrar por pantalla si la pizza elegida es vegetariana o no 
 # y todos los ingredientes que lleva.
 
+'''
+# respuesta copiada
 
-def pizzeria():
-    vegeta = ['pimiento', 'tofu']
-    carnivoro = ['peperoni', 'jamon', 'salmon']
-    pizza = int(input('quiers pizza vegetariana(1) o pizza carnivora(2): (1/2)'))
-    if pizza == 1:
-        print(f'elige un ingrediente: {vegeta}')
-
-
-
+# Presentación del menú con los tipos de pizza
+print("Bienvenido a la pizzeria Bella Napoli.\nTipos de pizza\n\t1- Vegetariana\n\t2- No vegetariana\n")
+tipo = input("Introduce el número correspondiente al tipo de pizza que quieres:")
+# Decisión sobre el tipo de pizza
+if tipo == "1":
+    print("Ingredientes de pizzas vegetarianas\n\t 1- Pimiento\n\t2- Tofu\n")
+    ingrediente = input("Introduce el ingrediente que deseas: ")
+    print("Pizza vegetariana con mozzarella, tomate y ", end="")
+    if ingrediente == "1":
+        print("pimiento")
+    else: 
+        print("tofu")
+else:
+    print("Ingredientes de pizzas no vegetarianas\n\t1- Peperoni\n\t2- Jamón\n\t3- Salmón\n")
+    ingrediente = input("Introduce el ingrediente que deseas: ")
+    print("Pizza no vegetarina con mozarrella, tomate y ", end="")
+    if ingrediente == "1":
+        print("peperoni")
+    elif ingrediente == "2":
+        print("jamón")
+    else:
+        print("salmón")
+'''
 
 
 #region bucles
@@ -600,25 +621,28 @@ def pizzeria():
 #Escribir un programa que pida al usuario una palabra y 
 #la muestre por pantalla 10 veces.
 
-
-
-
-
-
+'''
+def bucle_10():
+    palabra = str(input('dame una palabra: '))
+    contador = 0
+    while contador < 10:
+        print(palabra)
+        contador += 1
+bucle_10()
+'''
 
 
 #Ejercicio 2
 #Escribir un programa que pregunte al usuario su edad y muestre 
 # por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 
-
-
-
-
-
-
-
-
+'''
+def edad():
+    edad = int(input('dime tu edad: '))
+    for i in range(edad):
+        print(i+1)
+edad()
+'''
 
 
 #Ejercicio 3
@@ -626,11 +650,18 @@ def pizzeria():
 # y muestre por pantalla todos los números impares desde 1 hasta ese 
 # número separados por comas.
 
-
-
-
-
-
+'''
+def enteroposi():
+    try:
+        num = int(input('dame un entero positivo: '))
+    except ValueError:
+        print('te dije un numero positivo perro')
+    else:
+        for i in range(num+1):
+            if i %2 != 0:
+                print(i, end=',')
+enteroposi()
+'''
 
 
 #Ejercicio 4
@@ -638,10 +669,18 @@ def pizzeria():
 # muestre por pantalla la cuenta atrás desde ese número hasta 
 # cero separados por comas.
 
+'''
+def cuenta_atras():
+    num = int(input('dame un entero positivo: '))
+    lista = []
+    for i in range(num+1):
+        lista.append(i)
+    print(lista[::-1])
 
-
-
-
+    for i in range(num, 1, -1):
+        print(i-2, end=',')
+cuenta_atras()
+'''
 
 
 #Ejercicio 5
@@ -649,10 +688,16 @@ def pizzeria():
 # el interés anual y el número de años, y muestre por pantalla el capital 
 # obtenido en la inversión cada año que dura la inversión.
 
-
-
-
-
+'''
+def inversion():
+    invertir = float(input('cuanto inviertes? '))
+    interes = float(input('a que interes? '))
+    años = int(input('cuantos años? '))
+    for i in range(años):
+        invertir *= 1 + interes / 100
+        print('capital tras', str(i+1), 'años: ', str(round(invertir, 2)))
+inversion()
+'''
 
 
 #Ejercicio 6
@@ -660,31 +705,41 @@ def pizzeria():
 # muestre por pantalla un triángulo rectángulo como el de más abajo, 
 # de altura el número introducido.
 
-
-
-
-
-
-
+'''
+def triangulo():
+    numero = int(input('dame un numero entero: '))
+    for i in range(numero): 
+        for j in range(i+1):
+            print('*', end='')
+        print('')        
+triangulo()
+'''
 
 
 #Ejercicio 7
 #Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
 
-
-
-
-
+'''
+def tabla():
+    for i in range(1,11):
+        for j in range(1,11):
+            print(i*j, end='\t')
+        print('')
+tabla()
+'''
 
 
 #Ejercicio 8
 #Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla un triángulo rectángulo como el de más abajo.
 
-
-
-
-
+'''
+numero = int(input('dame un numero entero: '))
+for i in range(1, numero+1, 2):
+    for j in range(i, 0, -2):
+        print(j, end='')
+    print('')
+'''
 
 
 #Ejercicio 9
@@ -692,33 +747,64 @@ def pizzeria():
 # contraseña en una variable, pregunte al usuario por la contraseña 
 # hasta que introduzca la contraseña correcta.
 
-
-
-
-
-
+'''
+contraseña = '1234'
+contraseña_usuario = input('dame una contraseña: ')
+while contraseña != contraseña_usuario:
+    contraseña_usuario = input('vuelve a intentarlo: ')
+print('contraseña correcta')
+'''
 
 
 #Ejercicio 10
 #Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla si es un número primo o no
 
+'''
+def entero():
+    numero = int(input('dame un numero mayor a 2: '))
+    if numero <= 1:
+        print(f'{numero} No es primo, el numero debe ser mayor a 1')
+    i = 2
+    while numero % i != 0:
+        i += 1
+    if i == numero:
+        print(f'{numero} es primo')
+    else:
+        print(f'{numero} NO es primo')
+entero()
+'''
 
-
-
-
-
+'''
+#lo hacemos con la raiz cuadrada:   int(numero**0.5) + 1
+numero = int(input('dame un numero entero mayor a 1: '))
+if numero <= 1:
+    print(f'{numero} no es primo, tiene q ser mayor a 1 idiota')
+else:
+    num_primo = True
+    for i in range(2, int(numero**0.5) + 1):
+        if numero % i == 0:
+            num_primo = False
+            break  
+    if num_primo:
+        print(f'{numero} es primo.')
+    else:
+        print(f'{numero} no es primo, ya que es divisible por {i}')
+'''
 
 
 #Ejercicio 11
 #escribe un programa que pida al usuario una palabra y luego muesre por panatalla
 # una a una de las letras de la palabra introducida empezando por la última.
 
-
-
-
-
-
+'''
+# dos maneras de hacerlo
+palabra = input('dame una palabra: ')
+palabra_invertida = palabra[::-1]
+for i in range(len(palabra) -1, -1, -1,):
+        print(palabra[i], end='')
+print(f'\n{palabra_invertida}')
+'''
 
 
 #region listas y tuplas
@@ -726,11 +812,10 @@ def pizzeria():
 #Escribir un programa que almacene las asignaturas de un curso (por ejemplo matematicas, fisica
 #quimica, historia y lengua) en una lista y la muestre por pantalla
 
-
-
-
-
-
+'''
+asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+print(asignaturas)
+'''
 
 
 #Ejercicio 2
@@ -738,12 +823,12 @@ def pizzeria():
 # Física, Química, Historia y Lengua) en una lista y la muestre por pantalla el mensaje
 #  Yo estudio <asignatura>, donde <asignatura> es cada una de las asignaturas de la lista.
 
-
-
-
-
-
-
+'''
+asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+for i in asignaturas:
+    print(f' yo estudio {i}', end=',')
+print('')
+'''
 
 
 #Ejercicio 3
@@ -752,34 +837,42 @@ def pizzeria():
 # y después las muestre por pantalla con el mensaje En <asignatura> has sacado <nota> donde <asignatura> 
 # es cada una des las asignaturas de la lista y <nota> cada una de las correspondientes notas introducidas por el usuario.
 
-
-
-
-
+'''
+asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+notas = []
+for i in asignaturas:
+    nota = int(input(f'que nota has sacado en {i}: '))
+    notas.append(nota)
+for i in range(len(asignaturas)):
+    print(f'en {asignaturas[i]} has sacado {notas[i]}',  end=',')
+'''
 
 
 #Ejercicio 4
 #Escribir un programa que pregunte al usuario los números ganadores de la lotería primitiva, 
 # los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
 
+'''
+contador = 0
+listado = []
+while contador < 5:
+    numeros = int(input('dame los numermos de la loteria: '))
+    listado.append(numeros)
+    contador += 1
+print(sorted(listado))
+'''
 
-
-
-
-
-
-
+ 
 #Ejercicio 5
 #Escribir un programa que almacene en una lista los números del 1 al 10 
 # y los muestre por pantalla en orden inverso separados por comas.
 
-
-
-
-
-
-
-
+'''
+numeros = []
+for i in range(1,11):
+    numeros.append(i)
+print(numeros[::-1])
+'''
 
 
 #Ejercicio 6
@@ -788,65 +881,83 @@ def pizzeria():
 # cada asignatura y elimine de la lista las asignaturas aprobadas. Al final el programa debe mostrar
 #  por pantalla las asignaturas que el usuario tiene que repetir.
 
-
-
-
-
+'''
+suspenso = []
+asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+for i in asignaturas:
+    nota = int(input(f'que nota has sacado en {i}: '))
+    if nota < 5:
+        suspenso.append(i)
+print(f'tienes que repetir {suspenso}')
+'''
 
 
 #Ejercicio 7
 #Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras 
 # que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
 
-
-
-
-
+'''
+#con ayuda para lo del string
+import string
+abecedario = list(string.ascii_lowercase)
+for i in range(len(abecedario),1,-1):
+    if i %3 == 0:
+        abecedario.pop(i-1)
+print(abecedario)
+'''
 
 
 #Ejercicio 8
 #Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
 
-
-
-
-
-
-
+'''
+palabra = input('dame una palabra a ver si es palindromo: ')
+print(palabra[::-1])
+if palabra == palabra[::-1]:
+    print('es palindromo')
+else:
+    print('NO es palindromo')
+'''
 
 
 #Ejercicio 9
 #Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
 
-
-
-
-
-
-
+'''
+vocales = ['a','e','i','o','u']
+palabra = input('dame una palabra: ')
+for i in vocales:
+    contador = 0
+    for letra in palabra:
+        if letra == i:
+            contador += 1
+    print(f'la vocal {i} aparace {contador} veces en la palabra {palabra}')
+'''
 
 
 #Ejercicio 10
 #Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, 
 # y muestre por pantalla el menor y el mayor de los precios.
 
-
-
-
-
-
+'''
+precios = (50, 75, 46, 22, 80, 65, 8)
+precio_minimo = min(precios)
+precio_maximo = max(precios)
+print(f'el numero mas grande es: {precio_maximo}')
+print(f'el mas pequeño: {precio_minimo}')
+new_precio = sorted(precios)
+print(new_precio[0])
+print(new_precio[-1])
+'''
 
 
 #Ejercicio 11
 #Escribir un programa que almacene los vectores (1,2,3) y (-1,0,2) en dos listas 
 # y muestre por pantalla su producto escalar.
 
-
-
-
-
-
-
+'''
+uuhhhh
+'''
 
 
 #Ejercicio 12
@@ -878,21 +989,39 @@ def pizzeria():
 # Escribir un programa que guarde en una variable el diccionario {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}, 
 # pregunte al usuario por una divisa y muestre su símbolo o un mensaje de aviso si la divisa no está en el diccionario.
 
+'''
+monedas = {'euro':'€', 'dollar':'D', 'yen':'Y'}
+moneda = input('dime una moneda (euro, dollar o yen): ')
+print(monedas.get(moneda.lower(), 'escribe bien, elige una moneda de la lista'))
+''' 
 
-
-
-
-
-
+'''
+monedas = {'euro':'€', 'dollar':'D', 'yen':'Y'}
+moneda = input('dime una moneda (euro, dollar o yen): ')
+if moneda in monedas:
+    print(monedas[moneda.lower()])
+else:
+    print('esa moneda no esta en la lista')
+'''
 
 
 # Ejercicio 2
 # Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario. 
 # Después debe mostrar por pantalla el mensaje <nombre> tiene <edad> años, vive en <dirección> y su número de teléfono es <teléfono>.
 
-
-
-
+'''
+nombre = input('dame tu nombre: ')
+edad = int(input('que edad tienes: '))
+direccion = input('donde vives: ')
+telefono = int(input('numero telefono: '))
+datos = {
+    'nombre': nombre,
+    'edad': edad,
+    'direccion': direccion,
+    'telefono': telefono
+}
+print(f'{nombre} tiene {edad} años, vive en {direccion} y su numero de telefono es {telefono}')
+'''
 
 
 # Ejercicio 3
@@ -905,13 +1034,19 @@ def pizzeria():
 # Pera 	0.85
 # Naranja 	0.70
 
-
-
-
-
-
-
-
+'''
+frutas = {
+    'platano': 1.35,
+    'manzana': 0.80,
+    'pera': 0.85,
+    'naranja': 0.70
+}
+fruta = input('que fruta quiere: ').lower()
+kilos = float(input('cuantos quilos: '))
+if fruta in frutas:
+    precio = frutas[fruta] * kilos
+print(f'{kilos} kg de {fruta} valen {precio:.2f} €' if fruta in frutas else 'no tenemos esa fruta, mira la lista')
+'''
 
 
 # Ejercicio 4
@@ -920,8 +1055,12 @@ def pizzeria():
 
 
 
-
-
+#fecha = input('dame una fecha en formato dd/mm/aaaa')
+mes =  {
+    'enero':1, 'febrero':2, 'marzo':3, 'abril':4, 'mayo':5, 'junio':6, 'julio':7, 'agosto':8, 'septiembre':9,
+    'octubre':10, 'noviembre':11, 'diciembre':12
+}
+#print(f'{fecha[]}')
 
 
 
@@ -1066,27 +1205,45 @@ def pizzeria():
 # Ejercicio 1
 # Escribir una función que muestre por pantalla el saludo ¡Hola amiga! cada vez que se la invoque.
 
-
-
-
-
+'''
+def saludo():
+    print('hola')
+saludo()
+'''
 
 
 # Ejercicio 2
 # Escribir una función a la que se le pase una cadena <nombre> y muestre por pantalla el saludo ¡hola <nombre>!.
 
-
-
-
-
+'''
+def saludo_personal():
+    nombre = 'manel'
+    print(f'hola {nombre}')
+saludo_personal()
+'''
 
 
 # Ejercicio 3
 # Escribir una función que reciba un número entero positivo y devuelva su factorial.
 
-
-
-
+'''
+def factorial():
+    cuenta = 1
+    numero = int(input('dame un entero positivo: '))
+    for i in range(numero):
+        cuenta *= i+1
+        print(cuenta)
+factorial()        
+'''
+'''
+def factorial(numero):
+    cuenta = 1
+    for i in range(numero):
+        cuenta *= i+1
+        print(cuenta)
+    return cuenta
+print(factorial(5))
+'''
 
 
 # Ejercicio 4
@@ -1094,75 +1251,100 @@ def pizzeria():
 # La función debe recibir la cantidad sin IVA y el porcentaje de IVA a aplicar, y devolver el total 
 # de la factura. Si se invoca la función sin pasarle el porcentaje de IVA, deberá aplicar un 21%.
 
-
-
-
-
-
-
+'''
+def total_factura(precio, iva=21):
+    total = precio + (precio * iva) / 100
+    return total
+print(total_factura(123,15))
+'''
 
 
 # Ejercicio 5
 # Escribir una función que calcule el área de un círculo y otra que calcule el volumen de un cilindro usando la primera función.
 
+'''
+def area_circulo(r):
+    from math import pi as pi
+    return pi * r**2
 
+def volumen_cilindro(r, h):
+    return area_circulo(r) * h
 
-
-
-
-
-
-
+print(volumen_cilindro(3, 5))
+'''
 
 
 # Ejercicio 6
 # Escribir una función que reciba una muestra de números en una lista y devuelva su media.
 
-
-
-
-
-
-
-
-
-
-
+'''
+def media():
+    numeros = [2,4,8,5,54,23,44,65,76]
+    print(sum(numeros)/ len(numeros))
+media()
+'''
 
 
 # Ejercicio 7
 # Escribir una función que reciba una muestra de números en una lista y devuelva otra lista con sus cuadrados.
 
-
-
-
-
-
-
-
-
-
+'''
+def cuadrados():
+    numeros = [2,4,8,5,54,23,44,65,76]
+    lista_cuadrados = []
+    for i in numeros:
+        lista_cuadrados.append(i*i)
+    print(lista_cuadrados)
+cuadrados()
+'''        
 
 
 # Ejercicio 8
 # Escribir una función que reciba una muestra de números en una lista y devuelva un diccionario con su media, 
 # varianza y desviación típica.
 
+'''
+numeros = [2,4,8,5,54,23,44,65,76]
 
+def media():
+    return sum(numeros) / len(numeros)
 
+def cuadrado():
+    cuadrados = []
+    for i in numeros:
+        cuadrados.append(i*i)
+    return cuadrados
+   
+def varianza():
+    lista = []
+    for i in numeros:
+        calculo = (i - media())**2
+        lista.append(calculo)
+    return sum(lista) / len(lista)
 
+def desviacion():
+    from math import sqrt as raiz #sqrt es la raiz completa //  isqrt es la raiz entera
+    return raiz(varianza())
 
+result = {
+    'media' : f'{media():.2f}',
+    'varianza' : f'{varianza():.2f}',
+    'desviacion' : desviacion()
+}
 
-
-
-
-
-
+print(result)
+'''
 
 # Ejercicio 9
 # Escribir una función que calcule el máximo común divisor de dos números y otra que calcule el mínimo común múltiplo.
 
 
+def maximo_comun_divisor(n1, n2):
+    pass
+
+
+def minimo_comun_multiplo(n1, n2):
+    pass
 
 
 
