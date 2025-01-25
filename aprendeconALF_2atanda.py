@@ -1435,9 +1435,9 @@ print(f'\ntotal con iva: {total_iva}€')
 # aplicar la función dada a cada uno de los elementos de la lista.
 
 
-def funcion(otra_funcion, len(lista)):
-    return otra_lista
-
+#def funcion(otra_funcion, len(lista)):
+    #return otra_lista
+    #pass
 
 
 
