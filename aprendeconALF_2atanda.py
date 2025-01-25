@@ -1053,6 +1053,7 @@ print(f'{kilos} kg de {fruta} valen {precio:.2f} €' if fruta in frutas else 'n
 # Escribir un programa que pregunte una fecha en formato dd/mm/aaaa y muestre por pantalla la misma fecha en 
 # formato dd de <mes> de aaaa donde <mes> es el nombre del mes.
 
+""" 
 def fecha():
     fecha = input('dame una fecha en formato dd/mm/aaaa: ')
     mes =  {
@@ -1063,6 +1064,7 @@ def fecha():
     fecha_separada = fecha.split('/')
     print(f'{fecha_separada[0]} de {mes[int(fecha_separada[1])]} de {fecha_separada[2]}')
 fecha()
+ """
 
 
 # Ejercicio 5
@@ -1077,18 +1079,10 @@ fecha()
 
 
 
-
-
-
 # Ejercicio 6
 # Escribir un programa que cree un diccionario vacío y lo vaya llenado con información sobre una persona 
 # (por ejemplo nombre, edad, sexo, teléfono, correo electrónico, etc.) que se le pida al usuario. Cada vez 
 # que se añada un nuevo dato debe imprimirse el contenido del diccionario.
-
-
-
-
-
 
 
 
@@ -1391,11 +1385,38 @@ def minimo_comun_multiplo(n1, n2):
 # de la compra, y una de las funciones anteriores, y utilice la función pasada para aplicar los 
 # descuentos o el IVA a los productos de la cesta y devolver el precio final de la cesta.
 
+""" 
+def descuento(precio, descuento):
+    return precio - ((precio * descuento) / 100)
 
+def iva(precio, iva=21): 
+    return precio + ((precio * iva) / 100)
 
+def cesta_compra(cesta, funcion, *args):
+    precio_total = 0
+    print('precios: ')
+    for producto, precio in cesta.items():
+        precio_funcion = funcion(precio, *args)
+        print(f'{producto}: {precio_funcion}€')
+        precio_total += precio_funcion
+    return precio_total
 
+cesta = {
+    'Laptop': 200,        
+    'Auriculares': 30,   
+    'Monitor': 25,       
+    'Teclado': 50,        
+    'Ratón': 20           
+}
 
+print(f'\ncesta compra con descuento\n')
+total_descuento = cesta_compra(cesta, descuento, 10)
+print(f'\ntotal con descuento: {total_descuento}€\n')
 
+print(f'cesta compra con iva\n')
+total_iva = cesta_compra(cesta, iva, 21)
+print(f'\ntotal con iva: {total_iva}€')
+"""
 
 
 # Ejercicio 2
@@ -1409,13 +1430,13 @@ def minimo_comun_multiplo(n1, n2):
 
 
 
-
-
 # Ejercicio 3
 # Escribir una función que reciba otra función y una lista, y devuelva otra lista con el resultado de 
 # aplicar la función dada a cada uno de los elementos de la lista.
 
 
+def funcion(otra_funcion, len(lista)):
+    return otra_lista
 
 
 
