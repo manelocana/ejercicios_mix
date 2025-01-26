@@ -5,80 +5,72 @@
 
 
 
-# region datossimples
-# Ejercicio 1
-# Escribir un programa que muestre por pantalla la cadena ¡Hola Mundo!.
+#region datossimples
+#Ejercicio 1
+#Escribir un programa que muestre por pantalla la cadena ¡Hola Mundo!.
+
+
+print('hola mundo :)')
+
+
+
+
+#Ejercicio 2
+#Escribir un programa que almacene la cadena ¡Hola Mundo! en una variable 
+#y luego muestre por pantalla el contenido de la variable.
 
 
 
 
 
-# Ejercicio 2
-# Escribir un programa que almacene la cadena ¡Hola Mundo! en una variable 
-# y luego muestre por pantalla el contenido de la variable.
+#Ejercicio 3
+#Escribir un programa que pregunte el nombre del usuario en la consola 
+#y después de que el usuario lo introduzca muestre por pantalla 
+#la cadena ¡Hola <nombre>!, donde <nombre> es el nombre que el usuario haya introducido.
+
+
+
+
+#Ejercicio 4
+#Escribir un programa que muestre por pantalla el resultado de la siguiente operación aritmética XX.
 
 
 
 
 
-# Ejercicio 3
-# Escribir un programa que pregunte el nombre del usuario en la consola 
-# y después de que el usuario lo introduzca muestre por pantalla 
-# la cadena ¡Hola <nombre>!, donde <nombre> es el nombre que el usuario haya introducido.
-
-
-
-
-# Ejercicio 4
-# Escribir un programa que muestre por pantalla el resultado de la siguiente operación aritmética XX.
+#Ejercicio 5
+#Escribir un programa que pregunte al usuario por el número de horas trabajadas y el coste por hora. 
+#Después debe mostrar por pantalla la paga que le corresponde.
 
 
 
 
 
-# Ejercicio 5
-# Escribir un programa que pregunte al usuario por el número de horas trabajadas y el coste por hora. 
-# Después debe mostrar por pantalla la paga que le corresponde.
-
-
-
-
-
-# Ejercicio 6
-# Escribir un programa que lea un entero positivo, "nombre entier"
-# , introducido por el usuario y después muestre en pantalla la suma de todos los enteros 
-# desde 1 hasta "n". 
-
-
-
-
-
-
-# Ejercicio 7
-# Escribir un programa que pida al usuario su peso (kg) y estatura (m), 
-# calcule el índice de masa corporal y lo almacene en una variable,
-# y muestre por pantalla la frase: "tu indice de masa corporal es "imc", 
-# donde "imc" es el índice de masa corporal, calculado redondeado con dos decimales.
-
-
-
-
-
-# Ejercicio 8
-# Escribir un programa que pida al usuario dos números enteros 
-# y muestre por pantalla la <n> entre <m> da un cociente <c> 
-# y un resto <r> donde <n> y <m> son los números introducidos por el usuario, 
-# y <c> y <r> son el cociente y el resto de la división entera respectivamente.
+#Ejercicio 6
+#Escribir un programa que lea un entero positivo, "nombre entier"
+#, introducido por el usuario y después muestre en pantalla la suma de todos los enteros 
+#desde 1 hasta "n". 
 
 
 
 
 
 
+#Ejercicio 7
+#Escribir un programa que pida al usuario su peso (kg) y estatura (m), 
+#calcule el índice de masa corporal y lo almacene en una variable,
+#y muestre por pantalla la frase: "tu indice de masa corporal es "imc", 
+#donde "imc" es el índice de masa corporal, calculado redondeado con dos decimales.
 
-# Ejercicio 9
-# Escribir un programa que pregunte al usuario una cantidad a invertir, 
-# el interés anual y el número de años, y muestre por pantalla el capital obtenido en la inversión.
+
+
+
+
+#Ejercicio 8
+#Escribir un programa que pida al usuario dos números enteros 
+#y muestre por pantalla la <n> entre <m> da un cociente <c> 
+#y un resto <r> donde <n> y <m> son los números introducidos por el usuario, 
+#y <c> y <r> son el cociente y el resto de la división entera respectivamente.
 
 
 
@@ -86,8 +78,18 @@
 
 
 
-# Ejercicio 10
-# Una juguetería tiene mucho éxito en dos de sus productos: 
+#Ejercicio 9
+#Escribir un programa que pregunte al usuario una cantidad a invertir, 
+#el interés anual y el número de años, y muestre por pantalla el capital obtenido en la inversión.
+
+
+
+
+
+
+
+#Ejercicio 10
+#Una juguetería tiene mucho éxito en dos de sus productos: 
 # payasos y muñecas. Suele hacer venta por correo y 
 # la empresa de logística les cobra por peso de cada paquete 
 # así que deben calcular el peso de los payasos y muñecas que saldrán 
@@ -102,8 +104,8 @@
 
 
 
-# Ejercicio 11
-# Imagina que acabas de abrir una nueva cuenta de ahorros 
+#Ejercicio 11
+#Imagina que acabas de abrir una nueva cuenta de ahorros 
 # que te ofrece el 4% de interés al año. Estos ahorros debido a intereses, 
 # que no se cobran hasta finales de año, 
 # se te añaden al balance final de tu cuenta de ahorros. 
@@ -133,7 +135,7 @@
 
 
 
-# region cadenas
+#region cadenas
 # Ejercicio 1
 # Escribir un programa que pregunte el nombre del usuario en la consola 
 # y un número entero e imprima por pantalla en líneas distintas 
@@ -145,8 +147,8 @@
 
 
 
-# Ejercicio 2
-# Escribir un programa que pregunte el nombre completo 
+#Ejercicio 2
+#Escribir un programa que pregunte el nombre completo 
 # del usuario en la consola y después muestre por pantalla 
 # el nombre completo del usuario tres veces, una con todas 
 # las letras minúsculas, otra con todas las letras mayúsculas 
@@ -160,8 +162,8 @@
 
 
 
-# Ejercicio 3
-# Escribir un programa que pregunte el nombre del usuario en la consola y 
+#Ejercicio 3
+#Escribir un programa que pregunte el nombre del usuario en la consola y 
 # después de que el usuario lo introduzca, muestre por pantalla <NOMBRE> 
 # tiene <n> letras, donde <NOMBRE> es el nombre de usuario en mayúsculas y 
 # <n> es el número de letras que tienen el nombre.
@@ -173,8 +175,8 @@
 
 
 
-# Ejercicio 4
-# Los teléfonos de una empresa tienen el siguiente formato 
+#Ejercicio 4
+#Los teléfonos de una empresa tienen el siguiente formato 
 # prefijo-número-extension donde el prefijo es el código del país +34, 
 # y la extensión tiene dos dígitos (por ejemplo +34-913724710-56). 
 # Escribir un programa que pregunte por un número de teléfono con este 
@@ -189,8 +191,8 @@
 
 
 
-# Ejercicio 5
-# Escribir un programa que pida al usuario que introduzca una frase en 
+#Ejercicio 5
+#Escribir un programa que pida al usuario que introduzca una frase en 
 # la consola y muestre por pantalla la frase invertida.
 
 
@@ -199,8 +201,8 @@
 
 
 
-# Ejercicio 6
-# Escribir un programa que pida al usuario que introduzca una frase 
+#Ejercicio 6
+#Escribir un programa que pida al usuario que introduzca una frase 
 # en la consola y una vocal, y después muestre por pantalla la misma 
 # frase pero con la vocal introducida en mayúscula.
 
@@ -210,8 +212,8 @@
 
 
 
-# Ejercicio 7
-# Escribir un programa que pregunte el correo electrónico del usuario 
+#Ejercicio 7
+#Escribir un programa que pregunte el correo electrónico del usuario 
 # en la consola y muestre por pantalla otro correo electrónico con el 
 # mismo nombre (la parte delante de la arroba @) pero con dominio ceu.es.    
 
@@ -222,8 +224,8 @@
 
 
 
-# Ejercicio 8
-# Escribir un programa que pregunte por consola el precio 
+#Ejercicio 8
+#Escribir un programa que pregunte por consola el precio 
 # de un producto en euros con dos decimales y muestre por pantalla 
 # el número de euros y el número de céntimos del precio introducido.
 
@@ -234,8 +236,8 @@
 
 
 
-# Ejercicio 9
-# Escribir un programa que pregunte al usuario la fecha de su nacimiento 
+#Ejercicio 9
+#Escribir un programa que pregunte al usuario la fecha de su nacimiento 
 # en formato dd/mm/aaaa y muestra por pantalla, el día, el mes y el año. 
 # Adaptar el programa anterior para que también funcione cuando el día 
 # o el mes se introduzcan con un solo carácter.
@@ -247,8 +249,8 @@
 
 
 
-# Ejercicio 10
-# Escribir un programa que pregunte por consola por los productos 
+#Ejercicio 10
+#Escribir un programa que pregunte por consola por los productos 
 # de una cesta de la compra, separados por comas, y muestre por 
 # pantalla cada uno de los productos en una línea distinta.
 
@@ -259,8 +261,8 @@
 
 
 
-# Ejercicio 11
-# Escribir un programa que pregunte el nombre el un producto, 
+#Ejercicio 11
+#Escribir un programa que pregunte el nombre el un producto, 
 # su precio y un número de unidades y muestre por pantalla una cadena 
 # con el nombre del producto seguido de su precio unitario con 6 dígitos 
 # enteros y 2 decimales, el número de unidades con tres dígitos 
@@ -271,10 +273,10 @@
 
 
 
-# region condicionales
-# Ejercicio 1
-# Escribir un programa que pregunte al usuario su edad y 
-# muestre por pantalla si es mayor de edad o no.
+#region condicionales
+#Ejercicio 1
+#Escribir un programa que pregunte al usuario su edad y 
+#muestre por pantalla si es mayor de edad o no.
 
 
 
@@ -282,8 +284,8 @@
 
 
 
-# Ejercicio 2
-# Escribir un programa que almacene la cadena de caracteres contraseña 
+#Ejercicio 2
+#Escribir un programa que almacene la cadena de caracteres contraseña 
 # en una variable, pregunte al usuario por la contraseña e imprima por 
 # pantalla si la contraseña introducida por el usuario coincide con la 
 # guardada en la variable sin tener en cuenta mayúsculas y minúsculas.
@@ -295,8 +297,8 @@
 
 
 
-# Ejercicio 3
-# Escribir un programa que pida al usuario dos números y 
+#Ejercicio 3
+#Escribir un programa que pida al usuario dos números y 
 # muestre por pantalla su división. Si el divisor es cero el 
 # programa debe mostrar un error.
 
@@ -307,8 +309,8 @@
 
 
 
-# Ejercicio 4
-# Escribir un programa que pida al usuario un número entero y 
+#Ejercicio 4
+#Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla si es par o impar.
 
 
@@ -317,8 +319,8 @@
 
 
 
-# Ejercicio 5
-# Para tributar un determinado impuesto se debe ser mayor de 16 años y 
+#Ejercicio 5
+#Para tributar un determinado impuesto se debe ser mayor de 16 años y 
 # tener unos ingresos iguales o superiores a 1000 € mensuales. 
 # Escribir un programa que pregunte al usuario su edad y 
 # sus ingresos mensuales y muestre por pantalla si el usuario 
@@ -331,8 +333,8 @@
 
 
 
-# Ejercicio 6
-# Los alumnos de un curso se han dividido en dos grupos A y B 
+#Ejercicio 6
+#Los alumnos de un curso se han dividido en dos grupos A y B 
 # de acuerdo al sexo y el nombre. El grupo A esta formado por 
 # las mujeres con un nombre anterior a la M y los hombres con 
 # un nombre posterior a la N y el grupo B por el resto. 
@@ -346,16 +348,16 @@
 
 
 
-# Ejercicio 7
-# Los tramos impositivos para la declaración de la renta en un 
+#Ejercicio 7
+#Los tramos impositivos para la declaración de la renta en un 
 # determinado país son los siguientes:
-# Renta 	Tipo impositivo
-# Menos de 10000€ 	5%
-# Entre 10000€ y 20000€ 	15%
-# Entre 20000€ y 35000€ 	20%
-# Entre 35000€ y 60000€ 	30%
-# Más de 60000€ 	45%
-# Escribir un programa que pregunte al usuario su renta anual y 
+#Renta 	Tipo impositivo
+#Menos de 10000€ 	5%
+#Entre 10000€ y 20000€ 	15%
+#Entre 20000€ y 35000€ 	20%
+#Entre 35000€ y 60000€ 	30%
+#Más de 60000€ 	45%
+#Escribir un programa que pregunte al usuario su renta anual y 
 # muestre por pantalla el tipo impositivo que le corresponde.
 
 
@@ -366,8 +368,8 @@
 
 
 
-# Ejercicio 8
-# En una determinada empresa, sus empleados son evaluados al final 
+#Ejercicio 8
+#En una determinada empresa, sus empleados son evaluados al final 
 # de cada año. Los puntos que pueden obtener en la evaluación 
 # comienzan en 0.0 y pueden ir aumentando, traduciéndose en mejores 
 # beneficios. Los puntos que pueden conseguir los empleados 
@@ -376,11 +378,11 @@
 # niveles correspondientes a cada puntuación. La cantidad de dinero 
 # conseguida en cada nivel es de 2.400€ multiplicada por la puntuación 
 # del nivel.
-# Nivel 	Puntuación
-# Inaceptable 	0.0
-# Aceptable 	0.4
-# Meritorio 	0.6 o más
-# Escribir un programa que lea la puntuación del usuario e indique su nivel 
+#Nivel 	Puntuación
+#Inaceptable 	0.0
+#Aceptable 	0.4
+#Meritorio 	0.6 o más
+#Escribir un programa que lea la puntuación del usuario e indique su nivel 
 # de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 
 
@@ -389,8 +391,8 @@
 
 
 
-# Ejercicio 9
-# Escribir un programa para una empresa que tiene salas de juegos 
+#Ejercicio 9
+#Escribir un programa para una empresa que tiene salas de juegos 
 # para todas las edades y quiere calcular de forma automática el 
 # precio que debe cobrar a sus clientes por entrar. 
 # El programa debe preguntar al usuario la edad del cliente y 
@@ -407,15 +409,15 @@
 
 
 
-# Ejercicio 10
-# La pizzería Bella Napoli ofrece pizzas vegetarianas y no 
+#Ejercicio 10
+#La pizzería Bella Napoli ofrece pizzas vegetarianas y no 
 # vegetarianas a sus clientes. Los ingredientes para cada 
 # tipo de pizza aparecen a continuación.
 
-    # Ingredientes vegetarianos: Pimiento y tofu.
-    # Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
+    #Ingredientes vegetarianos: Pimiento y tofu.
+    #Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
 
-# Escribir un programa que pregunte al usuario si quiere una pizza 
+#Escribir un programa que pregunte al usuario si quiere una pizza 
 # vegetariana o no, y en función de su respuesta le muestre un 
 # menú con los ingredientes disponibles para que elija. 
 # Solo se puede eligir un ingrediente además de la mozzarella 
@@ -430,10 +432,10 @@
 
 
 
-# region bucles
-# Ejercicio 1
-# Escribir un programa que pida al usuario una palabra y 
-# la muestre por pantalla 10 veces.
+#region bucles
+#Ejercicio 1
+#Escribir un programa que pida al usuario una palabra y 
+#la muestre por pantalla 10 veces.
 
 
 
@@ -442,8 +444,8 @@
 
 
 
-# Ejercicio 2
-# Escribir un programa que pregunte al usuario su edad y muestre 
+#Ejercicio 2
+#Escribir un programa que pregunte al usuario su edad y muestre 
 # por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 
 
@@ -456,8 +458,8 @@
 
 
 
-# Ejercicio 3
-# Escribir un programa que pida al usuario un número entero positivo 
+#Ejercicio 3
+#Escribir un programa que pida al usuario un número entero positivo 
 # y muestre por pantalla todos los números impares desde 1 hasta ese 
 # número separados por comas.
 
@@ -468,8 +470,8 @@
 
 
 
-# Ejercicio 4
-# Escribir un programa que pida al usuario un número entero positivo y 
+#Ejercicio 4
+#Escribir un programa que pida al usuario un número entero positivo y 
 # muestre por pantalla la cuenta atrás desde ese número hasta 
 # cero separados por comas.
 
@@ -479,8 +481,8 @@
 
 
 
-# Ejercicio 5
-# Escribir un programa que pregunte al usuario una cantidad a invertir, 
+#Ejercicio 5
+#Escribir un programa que pregunte al usuario una cantidad a invertir, 
 # el interés anual y el número de años, y muestre por pantalla el capital 
 # obtenido en la inversión cada año que dura la inversión.
 
@@ -490,8 +492,8 @@
 
 
 
-# Ejercicio 6
-# Escribir un programa que pida al usuario un número entero y 
+#Ejercicio 6
+#Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla un triángulo rectángulo como el de más abajo, 
 # de altura el número introducido.
 
@@ -503,8 +505,8 @@
 
 
 
-# Ejercicio 7
-# Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
+#Ejercicio 7
+#Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
 
 
 
@@ -512,8 +514,8 @@
 
 
 
-# Ejercicio 8
-# Escribir un programa que pida al usuario un número entero y 
+#Ejercicio 8
+#Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla un triángulo rectángulo como el de más abajo.
 
 
@@ -522,8 +524,8 @@
 
 
 
-# Ejercicio 9
-# Escribir un programa que almacene la cadena de caracteres 
+#Ejercicio 9
+#Escribir un programa que almacene la cadena de caracteres 
 # contraseña en una variable, pregunte al usuario por la contraseña 
 # hasta que introduzca la contraseña correcta.
 
@@ -534,8 +536,8 @@
 
 
 
-# Ejercicio 10
-# Escribir un programa que pida al usuario un número entero y 
+#Ejercicio 10
+#Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla si es un número primo o no
 
 
@@ -545,8 +547,8 @@
 
 
 
-# Ejercicio 11
-# escribe un programa que pida al usuario una palabra y luego muesre por panatalla
+#Ejercicio 11
+#escribe un programa que pida al usuario una palabra y luego muesre por panatalla
 # una a una de las letras de la palabra introducida empezando por la última.
 
 
@@ -556,10 +558,10 @@
 
 
 
-# region listas y tuplas
-# Ejercicio 1
-# Escribir un programa que almacene las asignaturas de un curso (por ejemplo matematicas, fisica
-# quimica, historia y lengua) en una lista y la muestre por pantalla
+#region listas y tuplas
+#Ejercicio 1
+#Escribir un programa que almacene las asignaturas de un curso (por ejemplo matematicas, fisica
+#quimica, historia y lengua) en una lista y la muestre por pantalla
 
 
 
@@ -568,10 +570,10 @@
 
 
 
-# Ejercicio 2
-# Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
+#Ejercicio 2
+#Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
 # Física, Química, Historia y Lengua) en una lista y la muestre por pantalla el mensaje
-# Yo estudio <asignatura>, donde <asignatura> es cada una de las asignaturas de la lista.
+#  Yo estudio <asignatura>, donde <asignatura> es cada una de las asignaturas de la lista.
 
 
 
@@ -581,8 +583,8 @@
 
 
 
-# Ejercicio 3
-# Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
+#Ejercicio 3
+#Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
 # Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en cada asignatura, 
 # y después las muestre por pantalla con el mensaje En <asignatura> has sacado <nota> donde <asignatura> 
 # es cada una des las asignaturas de la lista y <nota> cada una de las correspondientes notas introducidas por el usuario.
@@ -593,8 +595,8 @@
 
 
 
-# Ejercicio 4
-# Escribir un programa que pregunte al usuario los números ganadores de la lotería primitiva, 
+#Ejercicio 4
+#Escribir un programa que pregunte al usuario los números ganadores de la lotería primitiva, 
 # los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
 
 
@@ -604,8 +606,8 @@
 
 
 
-# Ejercicio 5
-# Escribir un programa que almacene en una lista los números del 1 al 10 
+#Ejercicio 5
+#Escribir un programa que almacene en una lista los números del 1 al 10 
 # y los muestre por pantalla en orden inverso separados por comas.
 
 
@@ -617,8 +619,8 @@
 
 
 
-# Ejercicio 6
-# Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
+#Ejercicio 6
+#Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, 
 # Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en 
 # cada asignatura y elimine de la lista las asignaturas aprobadas. Al final el programa debe mostrar
 #  por pantalla las asignaturas que el usuario tiene que repetir.
@@ -629,8 +631,8 @@
 
 
 
-# Ejercicio 7
-# Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras 
+#Ejercicio 7
+#Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras 
 # que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
 
 
@@ -639,8 +641,8 @@
 
 
 
-# Ejercicio 8
-# Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
+#Ejercicio 8
+#Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
 
 
 
@@ -650,8 +652,8 @@
 
 
 
-# Ejercicio 9
-# Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
+#Ejercicio 9
+#Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
 
 
 
@@ -661,8 +663,8 @@
 
 
 
-# Ejercicio 10
-# Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, 
+#Ejercicio 10
+#Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, 
 # y muestre por pantalla el menor y el mayor de los precios.
 
 
@@ -672,8 +674,8 @@
 
 
 
-# Ejercicio 11
-# Escribir un programa que almacene los vectores (1,2,3) y (-1,0,2) en dos listas 
+#Ejercicio 11
+#Escribir un programa que almacene los vectores (1,2,3) y (-1,0,2) en dos listas 
 # y muestre por pantalla su producto escalar.
 
 
@@ -684,10 +686,10 @@
 
 
 
-# Ejercicio 12
-# Escribir un programa que almacene las matrices
-# en una lista y muestre por pantalla su producto.
-# Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una lista.
+#Ejercicio 12
+#Escribir un programa que almacene las matrices
+#en una lista y muestre por pantalla su producto.
+#Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una lista.
 
 
 
@@ -698,8 +700,8 @@
 
 
 
-# Ejercicio 13
-# Escribir un programa que pregunte por una muestra de números, separados por comas, los guarde en una lista 
+#Ejercicio 13
+#Escribir un programa que pregunte por una muestra de números, separados por comas, los guarde en una lista 
 # y muestre por pantalla su media y desviación típica.
 
 
@@ -708,7 +710,7 @@
 
 
 
-# region diccionarios
+#region diccionarios
 # Ejercicio 1
 # Escribir un programa que guarde en una variable el diccionario {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}, 
 # pregunte al usuario por una divisa y muestre su símbolo o un mensaje de aviso si la divisa no está en el diccionario.
@@ -809,7 +811,7 @@
 
 
 
-# Ejercicio 8
+#Ejercicio 8
 # Escribir un programa que cree un diccionario de traducción español-inglés. 
 # El usuario introducirá las palabras en español e inglés separadas por dos puntos, y 
 # cada par <palabra>:<traducción> separados por comas. El programa debe crear un diccionario con 
@@ -897,7 +899,7 @@
 
 
 
-# region  funciones
+#region  funciones
 # Ejercicio 1
 # Escribir una función que muestre por pantalla el saludo ¡Hola amiga! cada vez que se la invoque.
 
@@ -1036,7 +1038,7 @@
 
 
 # Ejercicios de Programación Funcional
-# region PROGRAMACION FUNCIONAL 
+#region PROGRAMACION FUNCIONAL 
 # Ejercicio 1
 # Escribir una función que aplique un descuento a un precio y otra que aplique el IVA a un precio. 
 # Escribir una tercera función que reciba un diccionario con los precios y porcentajes de una cesta 
@@ -1183,7 +1185,7 @@
 
 
 
-# region ejercicios de ficheros
+#region ejercicios de ficheros
 # Ejercicio 1
 # Escribir una función que pida un número entero entre 1 y 10 y guarde en un fichero con el nombre 
 # tabla-n.txt la tabla de multiplicar de ese número, done n es el número introducido.
