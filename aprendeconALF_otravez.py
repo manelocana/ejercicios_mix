@@ -88,18 +88,28 @@ print(f'tu imc es {imc:.2f}')
 # y un resto <r> donde <n> y <m> son los números introducidos por el usuario, 
 # y <c> y <r> son el cociente y el resto de la división entera respectivamente.
 
-
-
-
-
+""" 
+n = int(input('necesito un numero entero: '))
+m = int(input('otro numero entero: '))
+c = n / m
+r = n % m
+print(f'{n} entre {m} da un cociente de {c:.2f} y un resto de {r:.2f}')
+ """
 
 
 # Ejercicio 9
 # Escribir un programa que pregunte al usuario una cantidad a invertir, 
 # el interés anual y el número de años, y muestre por pantalla el capital obtenido en la inversión.
+    
+    # formula del interes compuesto: M = (C (1+(r/n))) n t
+    # M=monto incial, C=capital inicial, r=interes(decimal), n=numero de veces que capitaliza el interes anualmente, t=tiempo años
 
+inversion = float(input('cantidad a invertir: '))
+interes_anual = float(input('porcentaje interes anual: '))
+años = int(input('cuantos años de inversion: '))
 
-
+monto = inversion * (1 + ((interes_anual/100) / 12)) ** (12*años)
+print(monto)
 
 
 
