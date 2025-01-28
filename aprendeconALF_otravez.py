@@ -100,18 +100,26 @@ print(f'{n} entre {m} da un cociente de {c:.2f} y un resto de {r:.2f}')
 # Ejercicio 9
 # Escribir un programa que pregunte al usuario una cantidad a invertir, 
 # el interés anual y el número de años, y muestre por pantalla el capital obtenido en la inversión.
-    
-    # formula del interes compuesto: M = (C (1+(r/n))) n t
+
+"""   
+    # formula del interes compuesto: M = (C (1+(r/n))) ** n t
     # M=monto incial, C=capital inicial, r=interes(decimal), n=numero de veces que capitaliza el interes anualmente, t=tiempo años
 
 inversion = float(input('cantidad a invertir: '))
 interes_anual = float(input('porcentaje interes anual: '))
 años = int(input('cuantos años de inversion: '))
-
 monto = inversion * (1 + ((interes_anual/100) / 12)) ** (12*años)
 print(monto)
+ """
 
-
+""" 
+def ahorro(cantidad_invertir, interes, años):
+    cantidad = cantidad_invertir
+    for i in range(1, años+1):
+        cantidad += cantidad * (1+interes)
+    print(f'ha obtenido {cantidad:.2f}€')
+ahorro(1000, 0.04, 5)
+ """
 
 
 # Ejercicio 10
@@ -123,11 +131,15 @@ print(monto)
 # Escribir un programa que lea el número de payasos y muñecas vendidos 
 # en el último pedido y calcule el peso total del paquete que será enviado.
 
-
-
-
-
-
+""" 
+def juguetes(ventas_payaso, ventas_muñeca):
+    peso_payaso = 112
+    peso_muñeca = 75
+    payaso = ventas_payaso * peso_payaso
+    muñeca = ventas_muñeca * peso_muñeca
+    print(f'payasos: {ventas_payaso}, muñecas: {ventas_muñeca}, el peso del pedido es de {payaso + muñeca} gramos')
+juguetes(10, 5)
+ """
 
 
 # Ejercicio 11
@@ -142,8 +154,12 @@ print(monto)
 # Redondear cada cantidad a dos decimales.
 
 
-
-
+def cuentaahorro(interes=0.04,ingreso=1000, años=3):
+    dinero = ingreso
+    for i in range(1, años+1):
+        dinero += dinero * (1+interes)
+        print(f'tras el {i} año, tienes {dinero:.2f}€')
+cuentaahorro()
 
 
 
