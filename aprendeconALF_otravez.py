@@ -116,7 +116,7 @@ print(monto)
 def ahorro(cantidad_invertir, interes, años):
     cantidad = cantidad_invertir
     for i in range(1, años+1):
-        cantidad += cantidad * (1+interes)
+        cantidad = cantidad * (1+interes)
     print(f'ha obtenido {cantidad:.2f}€')
 ahorro(1000, 0.04, 5)
  """
@@ -153,14 +153,14 @@ juguetes(10, 5)
 # la cantidad de ahorros tras el primer, segundo y tercer años. 
 # Redondear cada cantidad a dos decimales.
 
-
-def cuentaahorro(interes=0.04,ingreso=1000, años=3):
-    dinero = ingreso
+""" 
+def cuenta_ahorros(interes=0.04, dinero_depositado=1000, años=3):
+    cuenta = dinero_depositado
     for i in range(1, años+1):
-        dinero += dinero * (1+interes)
-        print(f'tras el {i} año, tienes {dinero:.2f}€')
-cuentaahorro()
-
+        cuenta = cuenta * (1+interes)
+        print(f'el año {i} tienes {cuenta:.2f}')
+cuenta_ahorros()
+ """
 
 
 # Ejercicio 12
@@ -169,12 +169,14 @@ cuentaahorro()
 # Después el programa debe mostrar el precio habitual de una barra de pan, el descuento que se le hace 
 # por no ser fresca y el coste final total.
 
-
-
-
-
-
-
+""" def panaderia(pan=3.49, descuento=60):
+    descuento_decimal = descuento / 100
+    barra_descuento = pan * (1- descuento_decimal)
+    barras_vendidas_deayer = int(input('cuantas barras se vendieron de ayer: '))
+    print(f'el precio de una barra de pan es {pan}€\nel descuento es del {descuento}%')
+    print(f'el precio final de una barra es {barra_descuento}€\nel precio total es {barra_descuento * barras_vendidas_deayer:.2f}€')
+panaderia()
+ """
 
 
 # region cadenas
@@ -183,10 +185,20 @@ cuentaahorro()
 # y un número entero e imprima por pantalla en líneas distintas 
 # el nombre del usuario tantas veces como el número introducido.
 
+""" 
+def nombre():
+    nombre = input('nombre: ')
+    numero = int(input('que numero: '))
+    print('\n'.join([nombre] * numero))
+nombre()
+ """
 
-
-
-
+""" 
+def nombre_bucle(nombre='currucu', numero=3):
+    for i in range(numero):
+        print(nombre)
+nombre_bucle()
+ """
 
 
 # Ejercicio 2
