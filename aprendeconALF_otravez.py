@@ -210,10 +210,13 @@ nombre_bucle()
 # El usuario puede introducir su nombre combinando mayúsculas y 
 # minúsculas como quiera.
 
-
-
-
-
+""" 
+def mayus(nombre='currupipi'):
+    print(nombre.capitalize())
+    print(nombre.upper())
+    print(nombre.lower())
+mayus()
+ """
 
 
 # Ejercicio 3
@@ -222,11 +225,11 @@ nombre_bucle()
 # tiene <n> letras, donde <NOMBRE> es el nombre de usuario en mayúsculas y 
 # <n> es el número de letras que tienen el nombre.
 
-
-
-
-
-
+""" 
+def nombre(nombre='currupipi'):
+    print(f'el nombre {nombre.upper()}, tiene {len(nombre)} letras')
+nombre()
+ """
 
 
 # Ejercicio 4
@@ -237,12 +240,12 @@ nombre_bucle()
 # formato y muestre por pantalla el número de teléfono sin el prefijo y 
 # la extensión.
 
-
-
-
-
-
-
+""" 
+def numero_telf():
+    numero = input('telefono en formato prefijo-numero-extension: ')
+    print(numero[3:-3])
+numero_telf()
+ """
 
 
 # Ejercicio 5
@@ -250,8 +253,9 @@ nombre_bucle()
 # la consola y muestre por pantalla la frase invertida.
 
 
-
-
+def frase(frase='la mare que et va parir'):
+    print(frase[::-1])
+frase()
 
 
 
