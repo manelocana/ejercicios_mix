@@ -252,11 +252,11 @@ numero_telf()
 # Escribir un programa que pida al usuario que introduzca una frase en 
 # la consola y muestre por pantalla la frase invertida.
 
-
+""" 
 def frase(frase='la mare que et va parir'):
     print(frase[::-1])
 frase()
-
+ """ 
 
 
 # Ejercicio 6
@@ -264,10 +264,11 @@ frase()
 # en la consola y una vocal, y después muestre por pantalla la misma 
 # frase pero con la vocal introducida en mayúscula.
 
-
-
-
-
+""" 
+def vocal(frase='la mare que et va parir', vocal='a'):
+    print(frase.replace(vocal, vocal.capitalize()))
+vocal()
+ """
 
 
 # Ejercicio 7
@@ -275,11 +276,11 @@ frase()
 # en la consola y muestre por pantalla otro correo electrónico con el 
 # mismo nombre (la parte delante de la arroba @) pero con dominio ceu.es.    
 
-
-
-
-
-
+""" 
+def correo(correo='micorreo@gmail.com'):
+    return correo[:correo.find('@')] + '@ceu.es'
+print(correo())
+ """
 
 
 # Ejercicio 8
@@ -287,11 +288,12 @@ frase()
 # de un producto en euros con dos decimales y muestre por pantalla 
 # el número de euros y el número de céntimos del precio introducido.
 
-
-
-
-
-
+""" 
+def precio(precio=23.99):
+    precio = str(precio)
+    return precio[:precio.find('.')] + '€', precio[precio.rfind('.')+1 :] + ' centavos'
+print(precio())
+ """
 
 
 # Ejercicio 9
@@ -300,11 +302,20 @@ frase()
 # Adaptar el programa anterior para que también funcione cuando el día 
 # o el mes se introduzcan con un solo carácter.
 
-
-
-
-
-
+""" 
+def fecha_nacimiento(fecha='23/01/2020'):
+    dia = fecha[:fecha.find('/')]
+    mes = fecha[fecha.find('/')+1:fecha.rfind('/')]
+    año = fecha[fecha.rfind('/')+1:]
+    return f'dia: {dia}, mes: {mes}, año: {año}'
+print(fecha_nacimiento())
+ """
+""" 
+def nacimiento():
+    fecha = input('fecha de nacimiento (dd/mm/aaaa): ')
+    print(f'dia: {fecha[:2]}, mes: {fecha[3:5]}, año: {fecha[6:]}')
+nacimiento()
+ """
 
 
 # Ejercicio 10
@@ -312,11 +323,11 @@ frase()
 # de una cesta de la compra, separados por comas, y muestre por 
 # pantalla cada uno de los productos en una línea distinta.
 
-
-
-
-
-
+""" 
+def lista_compra(listacompra = f'patatas, manzanas, peras, platanos'):
+    return listacompra.replace(',', '\n')
+print(lista_compra())
+ """
 
 
 # Ejercicio 11
