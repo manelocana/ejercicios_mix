@@ -331,15 +331,18 @@ print(lista_compra())
 
 
 # Ejercicio 11
-# Escribir un programa que pregunte el nombre el un producto, 
+# Escribir un programa que pregunte el nombre de un producto, 
 # su precio y un número de unidades y muestre por pantalla una cadena 
 # con el nombre del producto seguido de su precio unitario con 6 dígitos 
 # enteros y 2 decimales, el número de unidades con tres dígitos 
 # y el coste total con 8 dígitos enteros y 2 decimales.
 
-
-
-
+""" 
+def producto(nombre='pan', precio=1.10, unidades=2):
+    total = precio * unidades
+    return f'nombre: {nombre}, precio: {precio:08.2f}€, unidades: {unidades:3d}u., total = {total:10.2f}€'
+print(producto())
+ """
 
 
 # region condicionales
@@ -347,10 +350,20 @@ print(lista_compra())
 # Escribir un programa que pregunte al usuario su edad y 
 # muestre por pantalla si es mayor de edad o no.
 
+""" 
+def edad(edad):
+    if edad >= 18:
+        print('eres mayor de edad')
+    else:
+        print('eres menor')
+edad(22)
+ """  
 
-
-
-
+"""  
+def edad(edad):
+    print(f'eres mayor de edad' if edad>=18 else 'eres menor')
+edad(17)
+ """
 
 
 # Ejercicio 2
@@ -359,11 +372,29 @@ print(lista_compra())
 # pantalla si la contraseña introducida por el usuario coincide con la 
 # guardada en la variable sin tener en cuenta mayúsculas y minúsculas.
 
+""" 
+def contraseña(contraseña_usuario):
+    contraseña = '1234'
+    print(f'bienvenido, contraseña correcta' if contraseña.lower()==contraseña_usuario.lower() else 'error, contraseña incorrecta')
+contraseña('1234')
+ """
 
-
-
-
-
+""" 
+    # voy a hacerlo con un bucle while (al final con un poco de ayuda lol)
+def contraseña(contraseña_usuario):
+    contraseña = '1234'
+    contador = 0
+    while contador <= 5:
+        contraseña_usuario = input('dime la contraseña: ')
+        if contraseña != contraseña_usuario:
+            print('contraseña incorrecta, intentalo de nuevo')
+            contador += 1
+            print(f'intentos {contador}')
+        else:
+            print('bingo!')
+            break
+contraseña('kjhvh')
+ """
 
 
 # Ejercicio 3
@@ -371,20 +402,35 @@ print(lista_compra())
 # muestre por pantalla su división. Si el divisor es cero el 
 # programa debe mostrar un error.
 
+""" 
+def division(n1, n2):
+    if n2 == 0:
+        print('error, el divisor no puede ser 0')
+    else:
+        result = n1/n2
+        print(f'la division da {result}')
+division(3,5)
+ """  
 
-
-
-
-
+"""  
+def division(n1, n2):
+    print('error'if n2==0 else f'la division es {n1/n2}')
+division(23,5)
+ """
 
 
 # Ejercicio 4
 # Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla si es par o impar.
 
-
-
-
+""" 
+def par_impar(numero):
+    if numero%2 == 0:
+        print('es par')
+    else:
+        print('es impar')
+par_impar(7)
+ """
 
 
 

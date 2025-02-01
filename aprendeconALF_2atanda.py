@@ -348,7 +348,7 @@ cesta_compra()
 # enteros y 2 decimales, el número de unidades con tres dígitos 
 # y el coste total con 8 dígitos enteros y 2 decimales.
 
-'''
+""" 
 def productos():
     producto = input('producto: ')
     precio = float(input('precio: '))
@@ -357,7 +357,7 @@ def productos():
     print(f'el producto', producto, 'tiene un precio de', precio, 'numero de unidades:', unidades)
     print(f'el precio total del pedido es', coste, '€')
 productos()
-'''
+ """
 
 
 #region condicionales
