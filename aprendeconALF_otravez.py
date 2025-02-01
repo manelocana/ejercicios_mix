@@ -433,7 +433,6 @@ par_impar(7)
  """
 
 
-
 # Ejercicio 5
 # Para tributar un determinado impuesto se debe ser mayor de 16 años y 
 # tener unos ingresos iguales o superiores a 1000 € mensuales. 
@@ -441,11 +440,14 @@ par_impar(7)
 # sus ingresos mensuales y muestre por pantalla si el usuario 
 # tiene que tributar o no.
 
-
-
-
-
-
+""" 
+def impuestos(edad, ingresos):
+    if edad < 16 or ingresos < 1000:
+        print('sales a 0, no tributas')
+    else:
+        print('paga impuestos perro')
+impuestos(22, 1800)
+ """
 
 
 # Ejercicio 6
@@ -456,11 +458,16 @@ par_impar(7)
 # Escribir un programa que pregunte al usuario su nombre y sexo, 
 # y muestre por pantalla el grupo que le corresponde.
 
-
-
-
-
-
+""" 
+def alumnos(nombre, sexo):
+    # hombre: h
+    # mujer: f
+    if sexo == 'f' and nombre < 'm' or sexo == 'h'and nombre > 'n':
+        print('perteneces al grupo A')
+    else:
+        print('grupo B')
+alumnos('paco', 'f')
+ """
 
 
 # Ejercicio 7
@@ -476,7 +483,19 @@ par_impar(7)
 # muestre por pantalla el tipo impositivo que le corresponde.
 
 
-
+def impuestos():
+    renta = int(input('cual es tu renta anual: '))
+    if renta < 10000:
+        print('te corresponde el 5%')
+    elif renta > 10000 and renta < 20000:
+        print('pagas el 15%')
+    elif renta > 20000 and renta < 35000:
+        print('pagas el 20%')
+    elif renta > 35000 and renta < 60000:
+        print('pagas el 30%')
+    else:
+        print('pagas el 45%')
+impuestos()
 
 
 
