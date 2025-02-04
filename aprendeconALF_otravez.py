@@ -89,12 +89,12 @@ print(f'tu imc es {imc:.2f}')
 # y <c> y <r> son el cociente y el resto de la división entera respectivamente.
 
 """ 
-n = int(input('necesito un numero entero: '))
-m = int(input('otro numero entero: '))
-c = n / m
-r = n % m
-print(f'{n} entre {m} da un cociente de {c:.2f} y un resto de {r:.2f}')
- """
+n_numero1 = int(input('necesito un numero entero: '))
+m_numero2 = int(input('otro numero entero: '))
+c_cociente = n_numero1 / m_numero2
+r_resto = n_numero1 % m_numero2
+print(f'{n_numero1} entre {m_numero2} da un cociente de {c_cociente:.2f} y un resto de {r_resto:.2f}')
+ """ 
 
 
 # Ejercicio 9
@@ -482,7 +482,7 @@ alumnos('paco', 'f')
 # Escribir un programa que pregunte al usuario su renta anual y 
 # muestre por pantalla el tipo impositivo que le corresponde.
 
-
+""" 
 def impuestos():
     renta = int(input('cual es tu renta anual: '))
     if renta < 10000:
@@ -496,10 +496,7 @@ def impuestos():
     else:
         print('pagas el 45%')
 impuestos()
-
-
-
-
+ """
 
 
 # Ejercicio 8
@@ -519,11 +516,23 @@ impuestos()
 # Escribir un programa que lea la puntuación del usuario e indique su nivel 
 # de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 
-
-
-
-
-
+""" 
+def puntos_trabajador():
+    puntuacion_usuario = float(input('cual ha sido tu puntuacion: '))
+    if puntuacion_usuario == 0.0:
+        nivel = 'inaceptable'
+    elif puntuacion_usuario == 0.4:
+        nivel = 'aceptable'
+    elif puntuacion_usuario >= 0.6:
+        nivel = 'meritorio'
+    else:
+        print('puntuacion incorrecta')
+        return
+    calculo = 2400 * puntuacion_usuario
+    print(f'tu nivel es {nivel}, recibiras: {calculo}€')
+puntos_trabajador()
+ """
+ 
 
 # Ejercicio 9
 # Escribir un programa para una empresa que tiene salas de juegos 
@@ -534,13 +543,20 @@ impuestos()
 # puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ 
 # y si es mayor de 18 años, 10€.
 
-
-
-
-
-
-
-
+""" 
+def precio_entrada(edad):
+    if edad > 0 and edad < 4:
+        precio = 0
+    elif edad >= 4 and edad < 18:
+        precio = 5
+    elif edad >= 18:
+        precio = 10
+    else:
+        print('edad incorrecta')
+        return
+    print(f'con {edad} años, su entrada cuesta {precio}€')
+precio_entrada(7)
+ """
 
 
 # Ejercicio 10
@@ -559,11 +575,28 @@ impuestos()
 # mostrar por pantalla si la pizza elegida es vegetariana o no 
 # y todos los ingredientes que lleva.
 
-
-
-
-
-
+""" 
+def pizzeria():
+    vegetarian = ['pimiento', 'tofu']
+    no_vegetarian = ['peperoni', 'jamon', 'salmon']
+    pregunta_usuario = input('quieres pizza vegeta?  (si/no): ').strip().lower()
+    if pregunta_usuario == 'si':
+        print(f'pizza vegetariana: {vegetarian}')
+        opcion = vegetarian
+    elif pregunta_usuario == 'no': 
+        print(f'las pizzas no vegeta son de: {no_vegetarian}')
+        opcion = no_vegetarian
+    else:
+        print('error, opciones: si / no')
+        return
+    ingrediente = input('elige un ingrediente de los opcionales: ').strip().lower()
+    if ingrediente in opcion:
+        print(f'elegiste la pizza con {ingrediente}, buen provecho')
+    else:
+        print('ingrediente seleccionado no disponible')
+        return
+pizzeria()
+ """
 
 
 # region bucles
@@ -571,11 +604,14 @@ impuestos()
 # Escribir un programa que pida al usuario una palabra y 
 # la muestre por pantalla 10 veces.
 
-
-
-
-
-
+""" 
+def palabrax10(palabra):
+    contador = 0
+    while contador < 10:
+        print(palabra)
+        contador += 1
+palabrax10('mane')
+ """
 
 
 # Ejercicio 2
@@ -583,7 +619,10 @@ impuestos()
 # por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 
 
-
+def edad_iteracion(edad):
+    for i in range(1, edad+1):
+        print(i)
+edad_iteracion(6)
 
 
 
