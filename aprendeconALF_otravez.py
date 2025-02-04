@@ -618,17 +618,12 @@ palabrax10('mane')
 # Escribir un programa que pregunte al usuario su edad y muestre 
 # por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 
-
+""" 
 def edad_iteracion(edad):
     for i in range(1, edad+1):
         print(i)
 edad_iteracion(6)
-
-
-
-
-
-
+ """
 
 
 # Ejercicio 3
@@ -636,11 +631,19 @@ edad_iteracion(6)
 # y muestre por pantalla todos los números impares desde 1 hasta ese 
 # número separados por comas.
 
-
-
-
-
-
+""" 
+# 'separador'.join(lista) para unir elementos de la lista
+def entero_positivo(numero):
+    impares = []
+    if not isinstance(numero, int) or numero < 1:
+        return print('numero erroneo')
+    else:
+        for i in range(1, numero+1):
+            if i % 2 != 0:
+                impares.append(str(i))
+    print(','.join(impares))
+entero_positivo(20)
+ """
 
 
 # Ejercicio 4
@@ -648,10 +651,14 @@ edad_iteracion(6)
 # muestre por pantalla la cuenta atrás desde ese número hasta 
 # cero separados por comas.
 
-
-
-
-
+""" 
+def cuenta_atras(numero):
+    listado = []
+    for i in range(numero, 0, -1):
+        listado.append(str(i))
+    print(','.join(listado))
+cuenta_atras(7)
+ """
 
 
 # Ejercicio 5
@@ -659,10 +666,15 @@ edad_iteracion(6)
 # el interés anual y el número de años, y muestre por pantalla el capital 
 # obtenido en la inversión cada año que dura la inversión.
 
-
-
-
-
+""" 
+def inversiones(capital=2000, interes=4, años=10):
+    cuenta = 0
+    for i in range(1, años+1):
+        capital *= 1 + interes / 100
+        print(f'capital tras el {i} año: {capital:.2f}€')
+    return capital
+inversiones()
+ """
 
 
 # Ejercicio 6
@@ -670,31 +682,43 @@ edad_iteracion(6)
 # muestre por pantalla un triángulo rectángulo como el de más abajo, 
 # de altura el número introducido.
 
-
-
-
-
-
-
+""" 
+# copiado
+def triangulo(numero):
+    for i in range(numero):
+        for j in range(i +1):
+            print('*', end='')
+        print('')
+triangulo(6)
+ """
 
 
 # Ejercicio 7
 # Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
 
-
-
-
-
+""" 
+# copiado
+def tabla_multiplicar():
+    for i in range(1,11):
+        for j in range(1,11):
+            print(i*j, end='\t')
+        print('')
+tabla_multiplicar()
+ """ 
 
 
 # Ejercicio 8
 # Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla un triángulo rectángulo como el de más abajo.
 
-
-
-
-
+""" 
+def otro_triangulo(numero):
+    for i in range(1, numero+1):
+        for j in range(i+1):
+            print('*', end='')
+        print('')
+otro_triangulo(3)
+ """
 
 
 # Ejercicio 9
@@ -702,11 +726,18 @@ edad_iteracion(6)
 # contraseña en una variable, pregunte al usuario por la contraseña 
 # hasta que introduzca la contraseña correcta.
 
-
-
-
-
-
+""" 
+def contraseña():
+    contraseña = 'hola perra'
+    while True:
+        usuario = str(input('dame la contraseña: '))
+        if usuario == contraseña:
+            print('bienvenido')
+            break
+        else:
+            print('contraseña incorrecta, prueba otra vez')
+contraseña()
+ """
 
 
 # Ejercicio 10
