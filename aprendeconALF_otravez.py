@@ -589,7 +589,7 @@ def pizzeria():
     else:
         print('error, opciones: si / no')
         return
-    ingrediente = input('elige un ingrediente de los opcionales: ').strip().lower()
+    ingrediente = input('elige un ingrediente de los opcionales: ').strip().lower()         # .strip() para quitar los espacios del str
     if ingrediente in opcion:
         print(f'elegiste la pizza con {ingrediente}, buen provecho')
     else:
@@ -903,33 +903,45 @@ asignaturas_suspensas()
 # Ejercicio 7
 # Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras 
 # que ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante.
-
-
-
-
-
+ 
+"""  
+#  con ayuda
+import string
+abecedario = list(string.ascii_lowercase)
+for i in range(len(abecedario),0,-1):
+    if i %3 == 0:
+        abecedario.pop(i-1)
+print(abecedario)
+ """
 
 
 # Ejercicio 8
 # Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
 
-
-
-
-
-
-
+""" 
+def palindromo(palabra):  
+    palabra = palabra.lower().replace(' ', '')
+    if palabra == palabra[::-1]:
+        print(f'{palabra} es palindromo')
+    else:
+        print(f'{palabra} NO es palindromo')
+palindromo('dabale arroz a la zorra el abad')
+ """
 
 
 # Ejercicio 9
-# Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
+# Escribir un programa que pida al usuario una palabra/frase y muestre por pantalla el número de veces que contiene cada vocal.
 
-
-
-
-
-
-
+""" 
+def contador_vocales(palabra):
+    vocales = 'aeiou'
+    contador = {vocal:0 for vocal in vocales}       # dict compression
+    for i in palabra.lower():
+        if i in vocales:
+            contador[i] += 1
+    print(contador)
+contador_vocales('cuantas vocales hay en esta frase?')
+ """
 
 
 # Ejercicio 10
