@@ -635,7 +635,7 @@ edad_iteracion(6)
 # 'separador'.join(lista) para unir elementos de la lista
 def entero_positivo(numero):
     impares = []
-    if not isinstance(numero, int) or numero < 1:
+    if not isinstance(numero, int) or numero < 1:       # isinstance(dato, type) para comprobar el typo y condicionarlo
         return print('numero erroneo')
     else:
         for i in range(1, numero+1):
@@ -744,22 +744,41 @@ contraseña()
 # Escribir un programa que pida al usuario un número entero y 
 # muestre por pantalla si es un número primo o no
 
+""" 
+# con ayuda de chat, haciendolo con la raiz cuadrada envez de hacer el for para todo el numero
 
+import math
+def numero_primo(numero):
+    if numero < 2:
+        print('no es primo')
+        return
+    for i in range(2, int(math.sqrt(numero)) + 1):
+        if numero % i == 0:
+            print('no es primo')
+            return
+    print('numero primo')
 
-
-
-
+numero = int(input('Introduce un número entero: ')) 
+numero_primo(numero)
+ """
 
 
 # Ejercicio 11
 # escribe un programa que pida al usuario una palabra y luego muesre por panatalla
 # una a una de las letras de la palabra introducida empezando por la última.
 
+""" 
+def al_reves(palabra):
+    print(palabra[::-1])
+al_reves('macarroni')
+ """
 
-
-
-
-
+""" 
+def alreves(palabra):
+    for i in palabra[::-1]:
+        print(i)
+alreves('carbonari')
+ """
 
 
 # region listas y tuplas
@@ -767,11 +786,10 @@ contraseña()
 # Escribir un programa que almacene las asignaturas de un curso (por ejemplo matematicas, fisica
 # quimica, historia y lengua) en una lista y la muestre por pantalla
 
-
-
-
-
-
+""" 
+asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+print(', '.join(asignaturas))
+ """
 
 
 # Ejercicio 2
@@ -779,12 +797,12 @@ contraseña()
 # Física, Química, Historia y Lengua) en una lista y la muestre por pantalla el mensaje
 # Yo estudio <asignatura>, donde <asignatura> es cada una de las asignaturas de la lista.
 
-
-
-
-
-
-
+""" 
+asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+print(f'yo estudio {asignaturas}')
+for i in asignaturas:
+    print(f'yo estudio {i}')
+ """
 
 
 # Ejercicio 3
@@ -793,34 +811,71 @@ contraseña()
 # y después las muestre por pantalla con el mensaje En <asignatura> has sacado <nota> donde <asignatura> 
 # es cada una des las asignaturas de la lista y <nota> cada una de las correspondientes notas introducidas por el usuario.
 
-
-
-
-
+""" 
+# resuelto con ayuda
+def asignaturas():
+    asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+    notas = []
+    for asignatura in asignaturas:
+        nota = float(input(f'que nota has sacado en {asignatura}: '))
+        notas.append(nota)
+    for i in range(len(asignaturas)):
+        print(f'en {asignaturas[i]} has sacado {notas[i]}')
+asignaturas()
+ """
 
 
 # Ejercicio 4
 # Escribir un programa que pregunte al usuario los números ganadores de la lotería primitiva, 
 # los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
 
+""" 
+# version simple
 
+def loteria():
+    numeros = []
+    contador = 0
+    while contador < 5:    
+        numero = int(input('dime los numeros ganadores: '))
+        numeros.append(numero)
+        contador += 1
+    print(sorted(numeros))
+loteria()
+ """
 
-
-
-
+""" 
+# con ayuda
+def loteria():
+    numeros = []
+    while len(numeros) < 6:
+        try:
+            numero = int(input('dame el numero ganador: '))
+            if numero < 1 or numero > 49:
+                print('error, el numero tiene que estar entre 1 y 49')
+            elif numero in numeros:
+                print('error, numero repetido')
+            else:
+                numeros.append(numero)
+        except ValueError:
+            print('tienes que introducir numeros')
+    print(f'los numeros ganadores son: {sorted(numeros)}')
+loteria()
+ """
 
 
 # Ejercicio 5
 # Escribir un programa que almacene en una lista los números del 1 al 10 
 # y los muestre por pantalla en orden inverso separados por comas.
 
-
-
-
-
-
-
-
+""" 
+# me estaba liando, al final facil con un bucle
+def lista_inversa():
+    lista = []
+    for i in range(1, 11):
+        lista.append(i)
+    print(lista[::-1])
+lista_inversa()
+ """
 
 
 # Ejercicio 6
@@ -829,10 +884,20 @@ contraseña()
 # cada asignatura y elimine de la lista las asignaturas aprobadas. Al final el programa debe mostrar
 #  por pantalla las asignaturas que el usuario tiene que repetir.
 
-
-
-
-
+""" 
+def asignaturas_suspensas():
+    asignaturas = ['matematicas', 'fisica', 'quimica', 'historia', 'lengua']
+    notas = []
+    for i in asignaturas:
+        nota = float(input(f'que nota has sacado en {i} '))
+        if nota < 5:
+            notas.append(i)
+    if notas:        
+        print(f'debes repetir: {", ".join(notas)}')
+    else:
+        print('todo aprovado, genial')
+asignaturas_suspensas()
+ """
 
 
 # Ejercicio 7
