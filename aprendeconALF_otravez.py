@@ -933,6 +933,19 @@ palindromo('dabale arroz a la zorra el abad')
 # Escribir un programa que pida al usuario una palabra/frase y muestre por pantalla el número de veces que contiene cada vocal.
 
 """ 
+def contador_vocales_bucle():
+    vocales = ['a','e','i','o','u']
+    palabra = input('dame una palabra: ')
+    for i in vocales:
+        contador = 0
+        for letra in palabra:
+            if letra == i:
+                contador += 1
+        print(f'la vocal {i} aparace {contador} veces en la palabra {palabra}')
+contador_vocales_bucle()
+ """
+
+""" 
 def contador_vocales(palabra):
     vocales = 'aeiou'
     contador = {vocal:0 for vocal in vocales}       # dict compression
@@ -948,11 +961,20 @@ contador_vocales('cuantas vocales hay en esta frase?')
 # Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 8, 
 # y muestre por pantalla el menor y el mayor de los precios.
 
+""" 
+def menor_mayor():
+    listado = [50, 75, 46, 22, 80, 65, 8]
+    listado = sorted(listado)
+    print(listado[0], listado[-1])
+menor_mayor()
+ """
 
-
-
-
-
+""" 
+def menor_mayor_funciones():
+    listado = [50, 75, 46, 22, 80, 65, 8]
+    print(min(listado), max(listado))
+menor_mayor_funciones()    
+ """
 
 
 # Ejercicio 11
@@ -960,11 +982,33 @@ contador_vocales('cuantas vocales hay en esta frase?')
 # y muestre por pantalla su producto escalar.
 
 
+# producto a escalar = primer elemento x primer elemento + segundo x segundo + tercero x tercero + ...
+# los vectores (listas de numeros) tienen que tener el mismo numero de elementos
+
+def producto_a_escalar():
+    listado1 = [2,3,4]      
+    listado2 = [5,6,7,]
+    if len(listado1) != len(listado2):
+        print('los vectores tienen que contener el mismo numero de elementos')
+        return
+    else:
+        producto = 0
+        for i in range(len(listado1)):
+            producto += listado1[i] * listado2[i]
+        print(producto)
+producto_a_escalar()
 
 
-
-
-
+def producto_a_escalar_comprido():
+    listado1 = [2,3,4]      
+    listado2 = [5,6,7,]
+    if len(listado1) != len(listado2):
+        print('los vectores tienen que contener el mismo numero de elementos')
+        return
+    else:
+        producto = sum(a*b for a, b in zip(listado1, listado2))
+    print(f'producto a escalar: {producto}')
+producto_a_escalar()
 
 
 # Ejercicio 12
