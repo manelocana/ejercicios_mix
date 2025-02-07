@@ -981,7 +981,7 @@ menor_mayor_funciones()
 # Escribir un programa que almacene los vectores (1,2,3) y (-1,0,2) en dos listas 
 # y muestre por pantalla su producto escalar.
 
-
+""" 
 # producto a escalar = primer elemento x primer elemento + segundo x segundo + tercero x tercero + ...
 # los vectores (listas de numeros) tienen que tener el mismo numero de elementos
 
@@ -997,8 +997,9 @@ def producto_a_escalar():
             producto += listado1[i] * listado2[i]
         print(producto)
 producto_a_escalar()
-
-
+ """
+ 
+""" 
 def producto_a_escalar_comprido():
     listado1 = [2,3,4]      
     listado2 = [5,6,7,]
@@ -1009,6 +1010,7 @@ def producto_a_escalar_comprido():
         producto = sum(a*b for a, b in zip(listado1, listado2))
     print(f'producto a escalar: {producto}')
 producto_a_escalar()
+ """
 
 
 # Ejercicio 12
