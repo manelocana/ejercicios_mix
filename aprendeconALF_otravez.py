@@ -846,7 +846,7 @@ loteria()
 """ 
 # con ayuda
 def loteria():
-    numeros = []
+    numeros = []                               
     while len(numeros) < 6:
         try:
             numero = int(input('dame el numero ganador: '))
@@ -1042,21 +1042,49 @@ producto_a_escalar()
 # Escribir un programa que guarde en una variable el diccionario {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}, 
 # pregunte al usuario por una divisa y muestre su símbolo o un mensaje de aviso si la divisa no está en el diccionario.
 
+""" 
+def diccionario():
+    monedero = {'euro':'€', 'dollar':'D', 'yen':'Y'}
+    moneda = input('dime una moneda (euro, dollar, yen): ').lower()
+    if moneda in monedero:
+        print(monedero[moneda])
+    else:
+        print(f'la moneda {moneda} no esta disponible')
+    
+    result = monedero.get(moneda, f'la moneda {moneda} no esta disponible')
+    print(result)
 
-
-
-
-
-
+diccionario()
+ """
 
 
 # Ejercicio 2
 # Escribir un programa que pregunte al usuario su nombre, edad, dirección y teléfono y lo guarde en un diccionario. 
 # Después debe mostrar por pantalla el mensaje <nombre> tiene <edad> años, vive en <dirección> y su número de teléfono es <teléfono>.
 
+'''
+def diccionario_usuario():
+    nombre = input('dame tu nombre: ')
+    edad = int(input('que edad tienes: '))
+    direccion = input('donde vives: ')
+    telefono = int(input('numero telefono: '))
+    datos = {
+        'nombre': nombre,
+        'edad': edad,
+        'direccion': direccion,
+        'telefono': telefono
+    }
+    print(f'{nombre} tiene {edad} años, vive en {direccion} y su numero de telefono es {telefono}')
+diccionario_usuario()
+'''
 
-
-
+""" 
+def diccionario_usuario():
+    datos_usuario = ['nombre', 'edad', 'direccion', 'telefono']
+    usuario = {dato:input(f'cual es tu {dato}? ') for dato in datos_usuario}
+    print(f"{usuario['nombre']} tiene {usuario['edad']} años, direccion: {usuario['direccion']} y telefono {usuario['telefono']}")
+diccionario_usuario()
+ """
 
 
 # Ejercicio 3
@@ -1066,16 +1094,40 @@ producto_a_escalar()
 # Fruta 	Precio
 # Plátano 	1.35
 # Manzana 	0.80
-# Pera 	0.85
+# Pera 	    0.85
 # Naranja 	0.70
 
+""" 
+def fruteria():
+    frutas = {'platano':1.35,
+            'manzana':0.8,
+            'pera':0.85,
+            'naranja':0.7}
+    fruta = input('que fruta quiere: ').lower()
+    try:
+        kg = float(input('cuantos kg: '))
+        if fruta in frutas:
+            precio = frutas[fruta] * kg
+            print(f'el precio final es {precio:.2f}€')
+        else:
+            print(f'la fruta {fruta} no esta disponible')
+    except ValueError:
+        print('introduce los kg, no una mamada')
+fruteria()
+ """
 
-
-
-
-
-
-
+""" 
+def fruteria():
+    frutas = {'platano':1.35,
+            'manzana':0.8,
+            'pera':0.85,
+            'naranja':0.7}
+    fruta = input('que fruta quiere: ').lower()
+    kg = float(input('cuantos kg: '))
+    precio_comprimido = {fruta:frutas[fruta]*kg} if fruta in frutas else None
+    print(precio_comprimido)
+fruteria()
+ """
 
 
 # Ejercicio 4
@@ -1083,9 +1135,13 @@ producto_a_escalar()
 # formato dd de <mes> de aaaa donde <mes> es el nombre del mes.
 
 
-
-
-
+def fechas(fecha):
+    meses = {1:'enero', 2:'febrero', 3:'marzo', 4:'abril', 5:'mayo', 6:'junio', 7:'julio'}
+    #fecha = input('dame una fecha en formato dd/mm/aaaa: ')
+    division_fecha = fecha.split('/')
+    
+    print(division_fecha[0] + meses[int(division_fecha[1])] + division_fecha[2])
+fechas('22/2/2222')
 
 
 
@@ -1094,8 +1150,6 @@ producto_a_escalar()
 # {'Matemáticas': 6, 'Física': 4, 'Química': 5} y después muestre por pantalla los créditos de cada 
 # asignatura en el formato <asignatura> tiene <créditos> créditos, donde <asignatura> es cada una de las 
 # asignaturas del curso, y <créditos> son sus créditos. Al final debe mostrar también el número total de créditos del curso.
-
-
 
 
 
