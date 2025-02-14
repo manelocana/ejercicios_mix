@@ -1134,15 +1134,32 @@ fruteria()
 # Escribir un programa que pregunte una fecha en formato dd/mm/aaaa y muestre por pantalla la misma fecha en 
 # formato dd de <mes> de aaaa donde <mes> es el nombre del mes.
 
-
+""" 
 def fechas(fecha):
-    meses = {1:'enero', 2:'febrero', 3:'marzo', 4:'abril', 5:'mayo', 6:'junio', 7:'julio'}
+    meses = {1:'enero', 2:'febrero', 3:'marzo', 4:'abril', 5:'mayo', 6:'junio', 7:'julio', 
+             8:'agosto', 9:'septiembre', 10:'octubre', 11:'noviembre', 12:'diciembre'}
     #fecha = input('dame una fecha en formato dd/mm/aaaa: ')
     division_fecha = fecha.split('/')
-    
-    print(division_fecha[0] + meses[int(division_fecha[1])] + division_fecha[2])
+    print(f'{division_fecha[0]} de {meses[int(division_fecha[1])]} del {division_fecha[2]}')
 fechas('22/2/2222')
+ """
 
+""" 
+from datetime import datetime
+def fechas(fecha):
+    meses = {1:'enero', 2:'febrero', 3:'marzo', 4:'abril', 5:'mayo', 6:'junio', 7:'julio', 
+             8:'agosto', 9:'septiembre', 10:'octubre', 11:'noviembre', 12:'diciembre'}
+    try:
+        fecha_objeto = datetime.strptime(fecha, '%d/%m/%Y')
+        dia = fecha_objeto.day
+        mes = fecha_objeto.month
+        año = fecha_objeto.year
+
+        print(f'{dia} de {meses[mes]} de {año}')
+    except ValueError:
+        print('error: la fecha no esta bien')
+fechas('22/2/2022')
+ """
 
 
 # Ejercicio 5
@@ -1151,11 +1168,16 @@ fechas('22/2/2222')
 # asignatura en el formato <asignatura> tiene <créditos> créditos, donde <asignatura> es cada una de las 
 # asignaturas del curso, y <créditos> son sus créditos. Al final debe mostrar también el número total de créditos del curso.
 
-
-
-
-
-
+""" 
+def asignaturas():
+    creditos = 0
+    asignaturas = {'Matemáticas':6, 'Física':4, 'Química':5}
+    for asignatura in asignaturas:
+        print(f'asignatura {asignatura} tiene {asignaturas[asignatura]} creditos')
+        creditos += asignaturas[asignatura]
+    print(f'los creditos totales del curso son {creditos}')
+asignaturas()
+ """
 
 
 # Ejercicio 6
@@ -1163,13 +1185,21 @@ fechas('22/2/2222')
 # (por ejemplo nombre, edad, sexo, teléfono, correo electrónico, etc.) que se le pida al usuario. Cada vez 
 # que se añada un nuevo dato debe imprimirse el contenido del diccionario.
 
-
-
-
-
-
-
-
+""" 
+def persona():
+    datos = {}
+    datos['nombre'] = input('dame tu nombre: ')
+    while True:
+        dato = input('dime un dato: \n(o introduce "salir"  si quieres finalizar)').strip().lower()
+        if dato == 'salir':
+            break
+        valor_dato = input(f'dame el valor de {dato}: ')
+        datos[dato] = valor_dato
+        print('datos actualizados')
+        for clave, valor in datos.items():
+            print(f'{clave}:{valor}')
+persona()
+ """
 
 
 # Ejercicio 7
@@ -1184,7 +1214,26 @@ fechas('22/2/2222')
 # Total 	Coste
 
 
-
+def lista_compra():
+    lista_compra = {}
+    while True:
+        print('escribe el articulo a comprar, o escribe "salir" para salir.')
+        articulo = input('que articulo quieres: ').strip().lower()
+        if articulo == 'salir':
+            break
+        try:
+            precio = float(input(f'que precio tiene {articulo}: '))
+            lista_compra[articulo] = precio
+        except ValueError:
+            print('escribe un numero valido para el precio')
+            continue
+    print('\nlista de la compra:')
+    total = 0
+    for articulo, precio in lista_compra.items():
+        print(f'{articulo:<15} {precio:.2f}€')
+        total += precio
+    print(f'\ntotal: {total:.2f}€')
+lista_compra()
 
 
 
