@@ -1766,30 +1766,36 @@ else:
     #     base = base * iva   
     #     return base 
 
-
+""" 
 base = float(input('introduce la base imponible de la factura: '))
 def aplica_iva(base, iva=21):
     iva = (base * iva)/100
     return base + iva
 print(aplica_iva(base,23))
+ """
 
 
 # Ejercicio 3
 # Detectar y corregir los errores del siguiente programa que calcula el producto escalar de dos vectores:
-
-# u = (1, 2, 3)
-# v = (4, 5, 6)
-
-# def producto_escalar(u, v):
-#     for i in u:
-#         u[i+1] *= v[i+1]
-#     return sum(u)
-
-# print(producto_escalar(u, v))
+    # u = (1, 2, 3)
+    # v = (4, 5, 6)
+    # def producto_escalar(u, v):
+    #     for i in u:
+    #         u[i+1] *= v[i+1]
+    #     return sum(u)
+    # print(producto_escalar(u, v))
 
 
+# producto a escalar = primer elemento x primer elemento + segundo x segundo + tercero x tercero + ...
+# los vectores (listas de numeros) tienen que tener el mismo numero de elementos
 
-
+u = (1,2,3)
+v = (4,5,6)
+def producto_escalar(u,v):
+    for i in u:
+        for z in v:
+            suma += u*v
+    
 
 
 
