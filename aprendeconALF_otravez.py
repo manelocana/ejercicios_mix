@@ -1213,7 +1213,8 @@ persona()
 # … 	…
 # Total 	Coste
 
-
+""" 
+# con ayuda
 def lista_compra():
     lista_compra = {}
     while True:
@@ -1234,11 +1235,7 @@ def lista_compra():
         total += precio
     print(f'\ntotal: {total:.2f}€')
 lista_compra()
-
-
-
-
-
+ """
 
 
 # Ejercicio 8
@@ -1746,35 +1743,35 @@ lista_compra()
 # region Ejercicios depuracion
 # Ejercicio 1
 # Corregir los errores sintácticos del siguiente programa:
+    # contraseña = input('Introduce la contraseña: ")
+    # if contraseña in ['sesamo'):
+    #   print('Pasa')
+    # else
+    #   print('No pasa')
 
-# contraseña = input('Introduce la contraseña: ")
-# if contraseña in ['sesamo'):
-#   print('Pasa')
-# else
-#   print('No pasa')
-
-
-
-
-
-
-
-
+""" 
+contraseña = input('introduce la contraseña: ')
+if contraseña == 'sesamo':
+    print('pasa')
+else:
+    print('no pasa')
+ """
 
 
 # Ejercicio 2
 # Detectar y corregir los errores del siguiente programa que aplica el iva a una factura:
-
-# base = input('Introduce la base imponible de la factura: ')
-# print(aplica_iva(base, iva))
-
-# def aplica_iva(base, iva = 21):
-#     base = base * iva   
-#     return base 
+    # base = input('Introduce la base imponible de la factura: ')
+    # print(aplica_iva(base, iva))
+    # def aplica_iva(base, iva = 21):
+    #     base = base * iva   
+    #     return base 
 
 
-
-
+base = float(input('introduce la base imponible de la factura: '))
+def aplica_iva(base, iva=21):
+    iva = (base * iva)/100
+    return base + iva
+print(aplica_iva(base,23))
 
 
 # Ejercicio 3
