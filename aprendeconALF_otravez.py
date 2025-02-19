@@ -1215,6 +1215,7 @@ persona()
 
 """ 
 # con ayuda
+
 def lista_compra():
     lista_compra = {}
     while True:
@@ -1246,10 +1247,41 @@ lista_compra()
 # palabra a palabra. Si una palabra no está en el diccionario debe dejarla sin traducir.
 
 
+import string
 
+def diccionario():
+    # el diccionario se lo pedi a chat
+    diccionario = {
+        "hola": "hello",
+        "adiós": "goodbye",
+        "por favor": "please",
+        "gracias": "thank you",
+        "lo siento": "sorry",
+        "sí": "yes",
+        "no": "no",
+        "mañana": "morning",
+        "noche": "night",
+        "agua": "water",
+        "comida": "food",
+        "amigo": "friend",
+        "casa": "house",
+        "libro": "book",
+        "ordenador": "computer"
+        }
 
+    frase_traducida = []
+    frase_input = 'Hola, esta noche quiero comida y agua gracias, mañana a casa, adiós'.lower().strip()
 
-
+    palabras = frase_input.split()
+    for palabra in palabras:
+        palabra_sin_comas = palabra.strip(string.punctuation)
+        traduccion = diccionario.get(palabra_sin_comas, palabra_sin_comas)
+        if palabra[-1] in string.punctuation:
+            traduccion += palabra[-1]
+        frase_traducida.append(traduccion)
+    print(' '.join(frase_traducida))
+    
+diccionario()
 
 
 
@@ -1616,7 +1648,6 @@ lista_compra()
 # Ejercicio 1
 # Escribir una función que pida un número entero entre 1 y 10 y guarde en un fichero con el nombre 
 # tabla-n.txt la tabla de multiplicar de ese número, done n es el número introducido.
-
 
 
 
