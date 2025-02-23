@@ -1246,7 +1246,8 @@ lista_compra()
 # las palabras y sus traducciones. Después pedirá una frase en español y utilizará el diccionario para traducirla 
 # palabra a palabra. Si una palabra no está en el diccionario debe dejarla sin traducir.
 
-
+""" 
+# con ayuda de chat aparte para crear el dict. para resolverlo
 import string
 
 def diccionario():
@@ -1280,10 +1281,8 @@ def diccionario():
             traduccion += palabra[-1]
         frase_traducida.append(traduccion)
     print(' '.join(frase_traducida))
-    
 diccionario()
-
-
+ """
 
 
 # Ejercicio 9
@@ -1294,13 +1293,36 @@ diccionario()
 # Si se desea pagar una factura se preguntará por el número de factura y se eliminará del diccionario. Después de cada operación 
 # el programa debe mostrar por pantalla la cantidad cobrada hasta el momento y la cantidad pendiente de cobro.
 
+""" 
+def facturas():
+    facturas = {}
+    while True:
+        print(facturas)
+        print('selecciona 1:nueva, selecciona 2:pagar, selecciona 3:terminar')
+        factura = input('que quieres hacer: 1, 2 o 3? ')
 
+        if factura == '1':
+            numero_factura = input('numero de factura: ')
+            coste_factura = input('coste factura: ')
+            facturas[numero_factura] = coste_factura
+            print(f'añadido factura numero: {numero_factura} con el coste {coste_factura}€')
+        
+        elif factura == '2':
+            try:
+                numero_factura = input('numero de factura: ')
+                if numero_factura in facturas[numero_factura]:
+                    del(facturas[numero_factura])
+                    print(f'la factura numero {numero_factura} ha sido eliminada')
+            except:
+                print('numero factura no se encuentra')
 
-
-
-
-
-
+        elif factura == '3':
+            break
+    
+        else:
+            print('algo has echo mal, no funciona')
+facturas()
+ """
 
 
 # Ejercicio 10
@@ -1319,8 +1341,153 @@ diccionario()
     # Terminar el programa.
 
 
+clientes = {}
+
+def menu_opciones():
+    print('1: añadir cliente')
+    print('2: eliminar cliente')
+    print('3: mostrar cliente')
+    print('4: listar todos los clientes')
+    print('5: listar clientes preferentes')
+    print('6: terminar')
+    
+def añadir_cliente():
+    nif = input('nif: ')
+    nombre = input('nombre: ')
+    direccion = input('direccion: ')
+    telefono = input('telefono: ')
+    preferente = input('preferente (s/n): ').lower().strip()
+    clientes[nif] = {
+        'nif': nif,
+        'nombre': nombre, 
+        'direccion': direccion,
+        'telefono': telefono, 
+        'preferente': preferente
+    }
+    print(f'cliente {nif} añadido')
+
+def eliminar_cliente():
+    nif = input('nif cliente a elminar: ')
+    if clientes.pop(nif, None):
+        print(f'cliente {nif} eliminado')
+    else:
+        print(f'cliente {nif} no se encuentra')
 
 
+def mostrar_cliente():
+    nif = input('nif: ')
+    print(clientes.get(nif, 'no se encuentra el cliente'))
+
+def mostrar_todos_clientes():
+    for cliente in clientes:
+        print(cliente)
+
+def cliente_preferente():
+    for cliente in clientes:
+        if cliente[preferente]:
+            pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+# todo en una funcion...
+# con ayuda de chat...
+def gestion_cliente():
+    clientes = {}
+    while True:
+        print('opciones')
+        print('1: añadir cliente')
+        print('2: eliminar cliente')
+        print('3: mostrar cliente')
+        print('4: listar todos los clientes')
+        print('5: listar clientes preferentes')
+        print('6: terminar')
+
+        opcion = input('elige una opcion: ')
+
+        if opcion == '1':
+            nif = input('introduce el NIF: ')
+            nombre = input('nombre: ')
+            direccion = input('direccion: ')
+            telefono = input('telefono: ')
+            correo = input('correo')
+            preferente = input('es preferente?: (s/n)').strip().lower()
+
+            clientes[nif] = {
+                'nif': nif,
+                'nombre': nombre,
+                'direccion': direccion, 
+                'telefono': telefono,
+                'correo': correo,
+                'preferente': preferente
+            }
+            print(f'añadido {nif} ok')
+
+        elif opcion == '2':
+            nif = input('nif de cliente a eliminar: ')
+            if nif in clientes:
+                del clientes[nif]
+                print(f'cliente {nif} eliminado')
+            else:
+                print(f'cliente {nif} no se encuentra en la base')
+
+        elif opcion == '3':
+            nif = input('nif cliente: ')
+            if nif in clientes:
+                cliente = clientes[nif]
+                print(f'cliente {nif}')
+                for clave, valor in cliente.items():
+                    print(f'{clave}:{valor}')
+            else:
+                print('cliente no encontrado')
+
+        elif opcion == '4':
+            for clave, valor in clientes.items():
+                print(f'{clave}:{valor}')
+        
+        elif opcion == '5':
+            preferentes = {}
+            for nif, datos  in clientes.items():
+                if datos['preferente']:
+                    preferentes[nif] = datos
+            if len(preferentes) > 0:
+                for nif, datos in preferentes.items():
+                    print(f'nif: {nif} - nombre: {datos[nombre]}')
+            else:
+                print('no hay clientes prefertentes')
+        
+        elif opcion == '6':
+            print('good bye')
+            break
+
+        else:
+            print('introduce una opcion correcta')
+
+gestion_cliente()
+
+ """
 
 
 
@@ -1363,6 +1530,9 @@ diccionario()
 # Escribir una función que muestre por pantalla el saludo ¡Hola amiga! cada vez que se la invoque.
 
 
+def hola():
+    print('hola')
+hola()
 
 
 
