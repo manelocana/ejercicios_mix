@@ -1340,77 +1340,6 @@ facturas()
     # Mostrar la lista de clientes preferentes de la base de datos con su NIF y nombre.
     # Terminar el programa.
 
-
-clientes = {}
-
-def menu_opciones():
-    print('1: añadir cliente')
-    print('2: eliminar cliente')
-    print('3: mostrar cliente')
-    print('4: listar todos los clientes')
-    print('5: listar clientes preferentes')
-    print('6: terminar')
-    
-def añadir_cliente():
-    nif = input('nif: ')
-    nombre = input('nombre: ')
-    direccion = input('direccion: ')
-    telefono = input('telefono: ')
-    preferente = input('preferente (s/n): ').lower().strip()
-    clientes[nif] = {
-        'nif': nif,
-        'nombre': nombre, 
-        'direccion': direccion,
-        'telefono': telefono, 
-        'preferente': preferente
-    }
-    print(f'cliente {nif} añadido')
-
-def eliminar_cliente():
-    nif = input('nif cliente a elminar: ')
-    if clientes.pop(nif, None):
-        print(f'cliente {nif} eliminado')
-    else:
-        print(f'cliente {nif} no se encuentra')
-
-
-def mostrar_cliente():
-    nif = input('nif: ')
-    print(clientes.get(nif, 'no se encuentra el cliente'))
-
-def mostrar_todos_clientes():
-    for cliente in clientes:
-        print(cliente)
-
-def cliente_preferente():
-    for cliente in clientes:
-        if cliente[preferente]:
-            pass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 """
 # todo en una funcion...
 # con ayuda de chat...
@@ -1486,11 +1415,92 @@ def gestion_cliente():
             print('introduce una opcion correcta')
 
 gestion_cliente()
-
  """
 
 
+""" 
+# lo mismo pero separado en funciones, lo he intentado... pero al final me lié...
+# y me corrigío los errores chat
 
+
+clientes = {}
+
+def menu_opciones():
+    print('\nMenu de opciones')
+    print('1: añadir cliente')
+    print('2: eliminar cliente')
+    print('3: mostrar cliente')
+    print('4: listar todos los clientes')
+    print('5: listar clientes preferentes')
+    print('6: terminar')
+    
+def añadir_cliente():
+    nif = input('nif: ')
+    nombre = input('nombre: ')
+    direccion = input('direccion: ')
+    telefono = input('telefono: ')
+    preferente = input('preferente (s/n): ').lower().strip() == 's'
+    clientes[nif] = {
+        'nif': nif,
+        'nombre': nombre, 
+        'direccion': direccion,
+        'telefono': telefono, 
+        'preferente': preferente
+    }
+    print(f'cliente {nif} añadido')
+
+def eliminar_cliente():
+    nif = input('nif cliente a elminar: ')
+    if clientes.pop(nif, None):
+        print(f'cliente {nif} eliminado')
+    else:
+        print(f'cliente {nif} no se encuentra')
+
+def mostrar_cliente():
+    nif = input('nif: ')
+    cliente = clientes.get(nif)
+    if cliente:
+        print(f'datos del cliente {nif}: ')
+        for clave, valor in clientes.items():
+            print(f'{clave}:{valor}')
+    else:
+        print('no se encuetra el cliente')
+
+def mostrar_todos_clientes():
+    if not clientes:
+        print('no hay clientes')
+        return
+    else:
+        for nif, datos in clientes.items():
+            print(f'nif: {nif}, nombre: {datos["nombre"]}')
+
+def cliente_preferente():
+    for nif, datos in clientes.items():
+        if datos['preferente']:
+            print(f'nif: {nif}, datos: {datos["nombre"]}')
+
+def main():
+    while True:
+        menu_opciones()
+        opcion = input('\nElige una opcionn: ').strip().lower()
+        if opcion == '1':
+            añadir_cliente()
+        elif opcion == '2':
+            eliminar_cliente()
+        elif opcion == '3':
+            mostrar_cliente()
+        elif opcion == '4':
+            mostrar_todos_clientes()
+        elif opcion == '5':
+            cliente_preferente()
+        elif opcion == '6':
+            print('good bye')
+            break
+        else:
+            print('error')
+
+main()
+ """
 
 
 # Ejercicio 11
@@ -1514,7 +1524,32 @@ gestion_cliente()
 # '98376547F': {'nombre': 'Carmen Sánchez', 'email': 'carmen@mail.com', 'teléfono': '667677855', 'descuento': 15.7}}
 
 
+# con ayuda de chat, estaba usando el metodo .split() pero recorriendo mal la cade
 
+cadena = ('nif;nombre;email;teléfono;descuento\n01234567L;Luis González;luisgonzalez@mail.com;656343576;12.5\n71476342J;'
+          'Macarena Ramírez;macarena@mail.com;692839321;8\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;5.2\n98376547F;'
+          'Carmen Sánchez;carmen@mail.com;667677855;15.7')
+
+lineas = cadena.split('\n')
+
+campos = lineas[0].split(';')
+
+directorio = {}
+
+for linea in lineas[1:]:
+    datos_cliente = linea.split(';')
+
+cliente = {campos[i]: datos_cliente[i] for i in range(len(campos))}
+
+nif = cliente['nif']
+directorio[nif] = {
+    'nombre': cliente['nombre'],
+    'email': cliente['email'],
+    'telefono': cliente['telefono'],
+    'descuento': cliente['descuento']
+}
+
+print(directorio)
 
 
 
@@ -1529,11 +1564,11 @@ gestion_cliente()
 # Ejercicio 1
 # Escribir una función que muestre por pantalla el saludo ¡Hola amiga! cada vez que se la invoque.
 
-
+""" 
 def hola():
     print('hola')
 hola()
-
+ """
 
 
 
