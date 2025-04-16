@@ -1523,7 +1523,7 @@ main()
 # '63823376M': {'nombre': 'Juan José Martínez', 'email': 'juanjo@mail.com', 'teléfono': '664888233', 'descuento': 5.2}, 
 # '98376547F': {'nombre': 'Carmen Sánchez', 'email': 'carmen@mail.com', 'teléfono': '667677855', 'descuento': 15.7}}
 
-
+""" 
 # con ayuda de chat, estaba usando el metodo .split() pero recorriendo mal la cade
 
 cadena = ('nif;nombre;email;teléfono;descuento\n01234567L;Luis González;luisgonzalez@mail.com;656343576;12.5\n71476342J;'
@@ -1550,14 +1550,7 @@ directorio[nif] = {
 }
 
 print(directorio)
-
-
-
-
-
-
-
-
+ """
 
 
 # region  funciones
